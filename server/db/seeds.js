@@ -1,7 +1,7 @@
 use castle_game;
 db.dropDatabase();
 
-db.cards.insertMany(
+db.cards.insertMany([
   {
     "material": [
         {
@@ -27,7 +27,7 @@ db.cards.insertMany(
         {
             "type": "Mortar",
             "value": 1,
-            "img": "../../src/images/material/money.png"
+            "img": "../../src/images/material/mortar.png"
         }
     ],
     "attack": [
@@ -76,4 +76,4 @@ db.cards.insertMany(
         }
     ]
   }
-);
+]);

@@ -14,7 +14,7 @@ MongoClient.connect('mongodb://localhost:27017', { useUnifiedTopology: true })
         const db = client.db('castle_game');
         const cardsCollection = db.collection('cards');
         const cardsRouter = createrRouter(cardsCollection);
-        app.use('/cards', cardsRouter);
+        app.use('/api/cards', cardsRouter);
     })
     .catch(console.error);
 
