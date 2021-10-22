@@ -3,77 +3,83 @@ db.dropDatabase();
 
 db.cards.insertMany([
   {
-    "material": [
-        {
-            "type": "Money",
-            "value": 1,
-            "img": "../../src/images/material/money.png"
-        },
-        {
-            "type": "Wood",
-            "value": 1,
-            "img": "../../src/images/material/wood.png"
-        },
-        {
-            "type": "Stone",
-            "value": 1,
-            "img": "../../src/images/material/stone.png"
-        },
-        {
-            "type": "Labour",
-            "value": 1,
-            "img": "../../src/images/material/labour.png"
-        },
-        {
-            "type": "Mortar",
-            "value": 1,
-            "img": "../../src/images/material/mortar.png"
-        }
-    ],
-    "attack": [
-        {
-            "type": "Bankruptcy",
-            "img": "../../src/images/attack/bankruptcy.png"
-        },
-        {
-            "type": "Fire",
-            "img": "../../src/images/attack/fire.png"
-        },
-        {
-            "type": "Shortage",
-            "img": "../../src/images/attack/shortage.png"
-        },
-        {
-            "type": "Plague",
-            "img": "../../src/images/attack/plague.png"
-        },
-        {
-            "type": "Frost",
-            "img": "../../src/images/attack/frost.png"
-        },
-        
-    ],
-    "defense": [
-        { 
-            "type": "Loan",
-            "img": "../../src/images/defense/loan.png"
-        },
-        {
-            "type": "Water",
-            "img": "../../src/images/defense/water.png"
-        },
-        {
-            "type": "Quarry",
-            "img": "../../src/images/defense/quarry.png"
-        },
-        {
-            "type": "Apothecary",
-            "img": "../../src/images/defense/apothecary.png"
-        },
-        {
-            "type": "Thaw",
-            "img": "../../src/images/defense/thaw.png"      
-        }
-    ]
+    "type": "material",
+    "name": "Money",
+      "value": 1,
+      "img": "./images/material/money.png"
+  },
+  {
+      "name": "Wood",
+      "type": "material",
+      "value": 1,
+      "img": "./images/material/wood.png"
+  },
+  {
+      "name": "Stone",
+      "type": "material",
+      "value": 1,
+      "img": "./images/material/stone.png"
+  },
+  {
+      "name": "Labour",
+      "type": "material",
+      "value": 1,
+      "img": "./images/material/labour.png"
+  },
+  {
+      "name": "Mortar",
+      "type": "material",
+      "value": 1,
+      "img": "./images/material/mortar.png"
+  },
+  {
+      "name": "Bankruptcy",
+      "type": "attack",
+      "img": "./images/attack/bankruptcy.png"
+  },
+  {
+      "name": "Fire",
+      "type": "attack",
+      "img": "./images/attack/fire.png"
+  },
+  {
+      "name": "Shortage",
+      "type": "attack",
+      "img": "./images/attack/shortage.png"
+  },
+  {
+      "name": "Plague",
+      "type": "attack",
+      "img": "./images/attack/plague.png"
+  },
+  {
+      "name": "Frost",
+      "type": "attack",
+      "img": "./images/attack/frost.png"
+  },
+  { 
+      "name": "Loan",
+      "type": "defense",
+      "img": "./images/defense/loan.png"
+  },
+  {
+      "name": "Water",
+      "type": "defense",
+      "img": "./images/defense/water.png"
+  },
+  {
+      "name": "Quarry",
+      "type": "defense",
+      "img": "./images/defense/quarry.png"
+  },
+  {  
+      "name": "Apothecary",
+      "type": "defense",
+      "img": "./images/defense/apothecary.png"
+  },
+  {
+      "name": "Thaw",
+      "type": "defense",
+      "img": "./images/defense/thaw.png"      
   }
 ]);
