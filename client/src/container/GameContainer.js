@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import GameService from '../services/GameService';
 import InitialDeck from '../components/InitialDeck';
+import PlayerHand from '../components/PlayerHand';
 
 const GameContainer = () => {
 
@@ -15,6 +16,7 @@ const GameContainer = () => {
         <div>
             <h1>Castle Game</h1>
             <InitialDeck allCards={allCards}/>
+            <PlayerHand/>
         </div>
     );
 

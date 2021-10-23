@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const InitialDeck = ({allCards}) => {
     
@@ -13,7 +13,6 @@ const InitialDeck = ({allCards}) => {
     return(
         <>
         <p>Initial Deck</p>
-        {console.log(randomDeck)}
         </>
     );
 };
