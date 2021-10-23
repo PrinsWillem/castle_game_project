@@ -338,34 +338,34 @@ db.cards.insertMany([
     "img": "./images/tools/digger.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
-    "name": "13_Knot_Rope",
+    "name": "13-Knot_Rope",
     "value": 4,
-    "img": "./images/tools/13_knot_rope.png"
+    "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "Measuring_Rode",
@@ -397,5 +397,4 @@ db.cards.insertMany([
     "value": 10,
     "img": "./images/tools/treadwheel_crane.png"
 }
-
 ]);
