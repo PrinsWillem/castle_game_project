@@ -2,15 +2,18 @@ import React, {useState} from 'react';
 
 const InitialDeck = ({allCards}) => {
     
-    const shuffleCards = function(){
-        allCards.sort(() => Math.random - 0.5);
-        return console.log(shuffleCards)
+    let randomDeck = [];
+    while(allCards.length !== 0){
+        let randomIndex = Math.floor(Math.random() * allCards.length);
+        randomDeck.push(allCards[randomIndex]);
+        allCards.splice(randomIndex, 1);
     }
+    allCards = randomDeck;
 
     return(
         <>
         <p>Initial Deck</p>
-        {shuffleCards()}
+        {console.log(randomDeck)}
         </>
     );
 };
