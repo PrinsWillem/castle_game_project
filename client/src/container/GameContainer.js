@@ -22,16 +22,30 @@ const GameContainer = () => {
         return randomDeck;
     }
 
-    function firstHand(cards){
+    function firstPlayerHand(cards){
         const deck = cards;
         const fiveCards = 5;
         const hand = deck.slice(0, fiveCards);
         return hand;
     };
 
+    function firstComputerHand(cards){
+        const deck = cards;
+        const fiveCards = 10;
+        const hand = deck.slice(5, fiveCards);
+        return hand;
+    };
+
+    function deckAfterDealing(cards){
+        const deck = cards;
+        const remainingCards = 79;
+        const hand = deck.slice(10, remainingCards);
+        return hand;
+    };
+
     return(
         <div>
-            <Game allCards={allCards} firstHand={firstHand}/>
+            <Game allCards={allCards} firstPlayerHand={firstPlayerHand} firstComputerHand={firstComputerHand} deckAfterDealing={deckAfterDealing}/>
         </div>
     );
 
