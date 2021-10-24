@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import GameService from '../services/GameService';
-import InitialDeck from '../components/InitialDeck';
-import PlayerHand from '../components/PlayerHand';
+import Game from '../components/Game';
 
 const GameContainer = () => {
 
@@ -9,14 +8,30 @@ const GameContainer = () => {
 
     useEffect(() => {
         GameService.getCards()
-        .then(cards => setAllCards(cards))
+        .then(cards => setAllCards(shuffleDeck(cards)))
     }, []);
+
+    function shuffleDeck(cards){
+        let randomDeck = [];
+        while(cards.length !== 0){
+            let randomIndex = Math.floor(Math.random() * cards.length);
+            randomDeck.push(cards[randomIndex]);
+            cards.splice(randomIndex, 1);
+        }
+        cards = randomDeck;
+        return randomDeck;
+    }
+
+    function firstHand(cards){
+        const deck = cards;
+        const fiveCards = 5;
+        const hand = deck.slice(0, fiveCards);
+        return hand;
+    };
 
     return(
         <div>
-            <h1>Castle Game</h1>
-            <InitialDeck allCards={allCards}/>
-            <PlayerHand/>
+            <Game allCards={allCards} firstHand={firstHand}/>
         </div>
     );
 
