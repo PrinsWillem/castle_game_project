@@ -2,7 +2,6 @@ import React from 'react';
 
 const Player1Hand = ({player1Hand, onMaterialCardClick, onToolCardClick}) => {
 
-    if(player1Hand.length > 0){
     const handleClickPlay = function(card){
         if(card.type === "material"){
             onMaterialCardClick(card)
@@ -20,11 +19,7 @@ const Player1Hand = ({player1Hand, onMaterialCardClick, onToolCardClick}) => {
         {player1Cards}
         </>
         )
-    }else{
-        return(
-            <h1>Loading....</h1>
-        )
-    }
+
 };
 
 export default Player1Hand;

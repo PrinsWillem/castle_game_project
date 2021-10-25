@@ -21,22 +21,39 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         if(!player1Materials.includes(card)){
             const copiedPlayer1Materials = [...player1Materials, card];
             setPlayer1Materials(copiedPlayer1Materials);
-            removeCardFromPlayer(card)
+            removeCardFromPlayer(card);
         }
     };
 
     const onToolCardClick = function(card){
-            const copiedPlayer1Tools = [...player1Tools, card];
-            setPlayer1Tools(copiedPlayer1Tools);
-            removeCardFromPlayer(card)
+        const copiedPlayer1Tools = [...player1Tools, card];
+        setPlayer1Tools(copiedPlayer1Tools);
+        removeCardFromPlayer(card);
+    };
+
+    const onDeckCardClick = function(card){
+        addCardFromDeck(card);
     };
 
     const removeCardFromPlayer = function(card){
-        const index = player1Hand.indexOf(card)
+        const index = player1Hand.indexOf(card);
         const copiedPlayer1Hand = [...player1Hand];
-        copiedPlayer1Hand.splice(index, 1)
+        copiedPlayer1Hand.splice(index, 1);
         setPlayer1Hand(copiedPlayer1Hand); 
-    }
+    };
+
+    const removeCardFromDeck = function(card){
+        const index = updatedDeck.indexOf(card);
+        const copiedUpdatedDeck = [...updatedDeck];
+        copiedUpdatedDeck.splice(index, 1);
+        setUpdatedDeck(copiedUpdatedDeck); 
+    };
+
+    const addCardFromDeck = function(card){
+        const index = updatedDeck.indexOf(card);
+        player1Hand.push(index, 1);
+        setPlayer1Hand(player1Hand); 
+    };
 
     useEffect(() => {
         setUpdatedDeck(deckAfterDealing)
@@ -49,11 +66,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     useEffect(() => {
         setPlayer2Hand(firstComputerHand)
     }, [firstComputerHand])
-    // const playerCards = firstPlayerHand(allCards).map((card) => {
-    //     return(
-    //         <li className="player-card" key={card._id}><img src={card.img} alt={card.name}/><button type="play">Play</button><button type="discard">Discard</button></li>
-    //     )
-    // });
 
     // const computerCards = firstComputerHand(allCards).map((card) => {
     //     return(
@@ -61,12 +73,10 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     //     )
     // });
 
- 
-
     return(
         <div id="grid-container">
             <div className="deck">
-                <Deck updatedDeck={updatedDeck}/>
+                <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick}/>
             </div>
             <div className="game">
                 <div>
