@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Player1Hand from './Player1Hand';
 import Player1Materials from './Player1Materials';
+import Player1Tools from './Player1Tools';
 import './game.css';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
@@ -21,6 +22,12 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setPlayer1Materials(copiedPlayer1Materials);
             removeCardFromPlayer(card)
         }
+    };
+
+    const onToolCardClick = function(card){
+            const copiedPlayer1Tools = [...player1Tools, card];
+            setPlayer1Tools(copiedPlayer1Tools);
+            removeCardFromPlayer(card)
     };
 
     const removeCardFromPlayer = function(card){
@@ -78,7 +85,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             <p>Material cards</p>
                         </div>
                         <div className="computer-tools">
-                            <p>Tools cards</p>
+                            <p>Tool cards</p>
                         </div>
                     </div>
                 </div>
@@ -88,11 +95,11 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             <Player1Materials player1Materials={player1Materials}/>
                         </div>
                         <div className="player-tools">
-                            <p>Tools cards</p>
+                            <Player1Tools player1Tools={player1Tools}/>
                         </div>
                     </div>
                     <p>This is your hand</p>
-                        <Player1Hand className="player-hand" player1Hand={player1Hand} onMaterialCardClick={onMaterialCardClick}/>
+                        <Player1Hand className="player-hand" player1Hand={player1Hand} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick}/>
                 </div>
             </div>
             <div className="discard">

@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Player1Hand = ({player1Hand, onMaterialCardClick}) => {
+const Player1Hand = ({player1Hand, onMaterialCardClick, onToolCardClick}) => {
 
     if(player1Hand.length > 0){
     const handleClickPlay = function(card){
         if(card.type === "material"){
             onMaterialCardClick(card)
-        };
+        } else if(card.type === "tool"){
+            onToolCardClick(card)
+        }
     };
 
     const player1Cards = player1Hand.map((card) => {
