@@ -4,7 +4,7 @@ import Game from '../components/Game';
 
 const GameContainer = () => {
 
-    const [allCards, setAllCards] = useState([]);
+    const [allCards, setAllCards] = useState([]);  
 
     useEffect(() => {
         GameService.getCards()
@@ -43,9 +43,13 @@ const GameContainer = () => {
         return hand;
     };
 
+    const dealtDeck = deckAfterDealing(allCards);
+    const firstCompHand = firstComputerHand(allCards);
+    const firstPlayHand = firstPlayerHand(allCards)
+
     return(
         <div>
-            <Game allCards={allCards} firstPlayerHand={firstPlayerHand} firstComputerHand={firstComputerHand} deckAfterDealing={deckAfterDealing}/>
+            <Game allCards={allCards} firstPlayerHand={firstPlayHand} firstComputerHand={firstCompHand} deckAfterDealing={dealtDeck}/>
         </div>
     );
 

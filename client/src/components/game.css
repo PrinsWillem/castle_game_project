@@ -38,9 +38,6 @@
     border-radius:5px;
     transition:0.5s linear;
 }
-.player-card img:hover{
-    transform:translateY(-20px);
-}
 .computer-hand{
     width:100%;
     padding:25px;
