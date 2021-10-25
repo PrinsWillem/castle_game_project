@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Player1Hand from './Player1Hand';
 import Player1Materials from './Player1Materials';
 import Player1Tools from './Player1Tools';
+import Deck from './Deck';
 import './game.css';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
@@ -38,7 +39,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     }
 
     useEffect(() => {
-        setPlayer1Hand(deckAfterDealing)
+        setUpdatedDeck(deckAfterDealing)
     }, [deckAfterDealing]);
 
     useEffect(() => {
@@ -60,19 +61,12 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     //     )
     // });
 
-    // const cardsDeck = deckAfterDealing(allCards).map((card) => {
-    //     return(
-    //         <li className="deck-card" key={card._id}><img src={"./images/back_image/castle.png"} alt={card.name}/></li>
-    //     )
-    // });
+ 
 
     return(
         <div id="grid-container">
             <div className="deck">
-                <p>This is the deck</p>
-                    <ul className="dealing-deck">
-                        {/* {cardsDeck} */}
-                    </ul>
+                <Deck updatedDeck={updatedDeck}/>
             </div>
             <div className="game">
                 <div>
