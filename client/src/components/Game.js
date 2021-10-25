@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import Player1Hand from './Player1Hand';
 import Player1Materials from './Player1Materials';
 import Player1Tools from './Player1Tools';
+import Player2Hand from './Player2Hand';
+import Player2Materials from './Player2Materials';
+import Player2Tools from './Player2Tools';
 import Deck from './Deck';
 import './game.css';
 
@@ -25,14 +28,31 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         }
     };
 
+    const onMaterialCardClick2 = function(card){
+        if(!player2Materials.includes(card)){
+            const copiedPlayer2Materials = [...player2Materials, card];
+            setPlayer2Materials(copiedPlayer2Materials);
+            removeCardFromPlayer(card);
+        }
+    };
+
     const onToolCardClick = function(card){
         const copiedPlayer1Tools = [...player1Tools, card];
         setPlayer1Tools(copiedPlayer1Tools);
         removeCardFromPlayer(card);
     };
 
+    const onToolCardClick2 = function(card){
+        const copiedPlayer2Tools = [...player2Tools, card];
+        setPlayer2Tools(copiedPlayer2Tools);
+        removeCardFromPlayer(card);
+    };
+
     const onDeckCardClick = function(card){
+        const copiedDeck = [...updatedDeck, card];
+        setUpdatedDeck(copiedDeck);
         addCardFromDeck(card);
+        removeCardFromDeck(card);
     };
 
     const removeCardFromPlayer = function(card){
@@ -50,8 +70,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     };
 
     const addCardFromDeck = function(card){
-        const index = updatedDeck.indexOf(card);
-        player1Hand.push(index, 1);
+        player1Hand.push(card);
         setPlayer1Hand(player1Hand); 
     };
 
@@ -80,18 +99,16 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             </div>
             <div className="game">
                 <div>
-                    <p>This is computer hand</p>
-                        <ul className="computer-hand">
-                            {/* {computerCards} */}
-                        </ul>
-                    <div id="computer-table">
+                    <div id="player-table">
                         <div className="computer-material">
-                            <p>Material cards</p>
+                            <Player2Materials player2Materials={player2Materials}/>
                         </div>
                         <div className="computer-tools">
-                            <p>Tool cards</p>
+                            <Player2Tools player2Tools={player2Tools}/>
                         </div>
                     </div>
+                    <p>This is your hand</p>
+                        <Player2Hand className="player-hand" player2Hand={player2Hand} onMaterialCardClick2={onMaterialCardClick2} onToolCardClick2={onToolCardClick2}/>
                 </div>
                 <div>
                     <div id="player-table">
