@@ -19,6 +19,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const [player1Tools, setPlayer1Tools] = useState([]);
     const [player2Tools, setPlayer2Tools] = useState([]);
     
+    // PLAYER 1 
 
     const onMaterialCardClick = function(card){
         if(!player1Materials.includes(card)){
@@ -28,23 +29,9 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         }
     };
 
-    const onMaterialCardClick2 = function(card){
-        if(!player2Materials.includes(card)){
-            const copiedPlayer2Materials = [...player2Materials, card];
-            setPlayer2Materials(copiedPlayer2Materials);
-            removeCardFromPlayer(card);
-        }
-    };
-
     const onToolCardClick = function(card){
         const copiedPlayer1Tools = [...player1Tools, card];
         setPlayer1Tools(copiedPlayer1Tools);
-        removeCardFromPlayer(card);
-    };
-
-    const onToolCardClick2 = function(card){
-        const copiedPlayer2Tools = [...player2Tools, card];
-        setPlayer2Tools(copiedPlayer2Tools);
         removeCardFromPlayer(card);
     };
 
@@ -62,16 +49,53 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         setPlayer1Hand(copiedPlayer1Hand); 
     };
 
+    const addCardFromDeck = function(card){
+        player1Hand.push(card);
+        setPlayer1Hand(player1Hand); 
+    };
+
+    // PLAYER 2
+
+    const onMaterialCardClick2 = function(card){
+        if(!player2Materials.includes(card)){
+            const copiedPlayer2Materials = [...player2Materials, card];
+            setPlayer2Materials(copiedPlayer2Materials);
+            removeCardFromPlayer2(card);
+        }
+    };
+
+    const onToolCardClick2 = function(card){
+        const copiedPlayer2Tools = [...player2Tools, card];
+        setPlayer2Tools(copiedPlayer2Tools);
+        removeCardFromPlayer2(card);
+    };
+
+    const onDeckCardClick2 = function(card){
+        const copiedDeck = [...updatedDeck, card];
+        setUpdatedDeck(copiedDeck);
+        addCardFromDeck2(card);
+        removeCardFromDeck(card);
+    };
+
+    const removeCardFromPlayer2 = function(card){
+        const index = player2Hand.indexOf(card);
+        const copiedPlayer2Hand = [...player2Hand];
+        copiedPlayer2Hand.splice(index, 1);
+        setPlayer2Hand(copiedPlayer2Hand); 
+    };
+
+    const addCardFromDeck2 = function(card){
+        player2Hand.push(card);
+        setPlayer2Hand(player2Hand); 
+    };
+
+    //PLAYER1 & PLAYER2
+
     const removeCardFromDeck = function(card){
         const index = updatedDeck.indexOf(card);
         const copiedUpdatedDeck = [...updatedDeck];
         copiedUpdatedDeck.splice(index, 1);
         setUpdatedDeck(copiedUpdatedDeck); 
-    };
-
-    const addCardFromDeck = function(card){
-        player1Hand.push(card);
-        setPlayer1Hand(player1Hand); 
     };
 
     useEffect(() => {
@@ -95,20 +119,20 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     return(
         <div id="grid-container">
             <div className="deck">
-                <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick}/>
+                <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick} onDeckCardClick2={onDeckCardClick2}/>
             </div>
             <div className="game">
                 <div>
-                    <div id="player-table">
-                        <div className="computer-material">
+                    <p>This is your hand</p>
+                        <Player2Hand className="player2-hand" player2Hand={player2Hand} onMaterialCardClick2={onMaterialCardClick2} onToolCardClick2={onToolCardClick2}/>
+                    <div id="player2-table">
+                        <div className="player2-material">
                             <Player2Materials player2Materials={player2Materials}/>
                         </div>
-                        <div className="computer-tools">
+                        <div className="player2-tools">
                             <Player2Tools player2Tools={player2Tools}/>
                         </div>
                     </div>
-                    <p>This is your hand</p>
-                        <Player2Hand className="player-hand" player2Hand={player2Hand} onMaterialCardClick2={onMaterialCardClick2} onToolCardClick2={onToolCardClick2}/>
                 </div>
                 <div>
                     <div id="player-table">

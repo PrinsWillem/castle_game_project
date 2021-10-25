@@ -28,7 +28,16 @@
     width:100%;
     padding:25px;
 }
+.player2-hand{
+    width:100%;
+    padding:25px;
+}
 .player-card{
+    display:inline;
+    list-style:none;
+    padding:5px;
+}
+.player2-card{
     display:inline;
     list-style:none;
     padding:5px;
@@ -38,31 +47,10 @@
     border-radius:5px;
     transition:0.5s linear;
 }
-.computer-hand{
-    width:100%;
-    padding:25px;
-}
-.computer-card{
-    display:inline;
-    list-style:none;
-    padding:5px;
-}
-.computer-card img{
+.player2-card img{
     width:15%;
     border-radius:5px;
     transition:0.5s linear;
-}
-#computer-table{
-    display:grid;
-    grid-template-areas:
-        'computer-material computer-tools';
-    grid-template-columns:50%;
-}
-.computer-material{
-    grid-area:computer-material;
-}
-.computer-tools{
-    grid-area:computer-tools;
 }
 #player-table{
     display:grid;
@@ -70,9 +58,23 @@
         'player-material player-tools';
     grid-template-columns:50%;
 }
+#player2-table{
+    display:grid;
+    grid-template-areas:
+        'computer-material computer-tools';
+    grid-template-columns:50%;
+}
 .player-material{
     grid-area:player-material;
+}
+.player2-material{
+    grid-area:computer-material;
 }
 .player-tools{
     grid-area:player-tools;
 }
+.player2-tools{
+    grid-area:computer-tools;
+}
+
+
