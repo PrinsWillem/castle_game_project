@@ -1,6 +1,5 @@
 use castle_game;
 db.dropDatabase();
-
 db.cards.insertMany([
   {
     "name": "Money",
@@ -129,153 +128,183 @@ db.cards.insertMany([
   },
   {
     "name": "Bankruptcy",
-     "type": "attack",
+    "attacks": "Money",
+    "type": "attack",
     "img": "./images/attack/bankruptcy.png"
   },
   {
     "name": "Bankruptcy",
-     "type": "attack",
+    "attacks": "Money",
+    "type": "attack",
     "img": "./images/attack/bankruptcy.png"
   },
   {
     "name": "Bankruptcy",
-     "type": "attack",
+    "attacks": "Money",
+    "type": "attack",
     "img": "./images/attack/bankruptcy.png"
   },
   {
     "name": "Fire",
+    "attacks": "Wood",
     "type": "attack",
     "img": "./images/attack/fire.png"
   },
   {
     "name": "Fire",
+    "attacks": "Wood",
     "type": "attack",
     "img": "./images/attack/fire.png"
   },
   {
     "name": "Fire",
+    "attacks": "Wood",
     "type": "attack",
     "img": "./images/attack/fire.png"
   },
   {
     "name": "Shortage",
+    "attacks": "Stone",
     "type": "attack",
     "img": "./images/attack/shortage.png"
   },
   {
     "name": "Shortage",
+    "attacks": "Stone",
     "type": "attack",
     "img": "./images/attack/shortage.png"
   },
   {
     "name": "Shortage",
+    "attacks": "Stone",
     "type": "attack",
     "img": "./images/attack/shortage.png"
   },
   {
     "name": "Plague",
+    "attacks": "Labour",
     "type": "attack",
     "img": "./images/attack/plague.png"
   },
   {
     "name": "Plague",
+    "attacks": "Labour",
     "type": "attack",
     "img": "./images/attack/plague.png"
   },
   {
     "name": "Plague",
+    "attacks": "Labour",
     "type": "attack",
     "img": "./images/attack/plague.png"
   },
   {
     "name": "Frost",
+    "attacks": "Mortar",
     "type": "attack",
     "img": "./images/attack/frost.png"
   },
   {
     "name": "Frost",
+    "attacks": "Mortar",
     "type": "attack",
     "img": "./images/attack/frost.png"
   },
   {
     "name": "Frost",
+    "attacks": "Mortar",
     "type": "attack",
     "img": "./images/attack/frost.png"
   },
-  { 
+  {
     "name": "Loan",
+    "defence": "Bankruptcy",
     "type": "defense",
     "img": "./images/defense/loan.png"
   },
-  { 
+  {
     "name": "Loan",
+    "defence": "Bankruptcy",
     "type": "defense",
     "img": "./images/defense/loan.png"
   },
-  { 
+  {
     "name": "Loan",
+    "defence": "Bankruptcy",
     "type": "defense",
     "img": "./images/defense/loan.png"
   },
   {
     "name": "Water",
+    "defence": "Fire",
     "type": "defense",
     "img": "./images/defense/water.png"
   },
   {
     "name": "Water",
+    "defence": "Fire",
     "type": "defense",
     "img": "./images/defense/water.png"
   },
   {
     "name": "Water",
+    "defence": "Fire",
     "type": "defense",
     "img": "./images/defense/water.png"
   },
   {
     "name": "Quarry",
+    "defence": "Shortage",
     "type": "defense",
     "img": "./images/defense/quarry.png"
   },
   {
     "name": "Quarry",
+    "defence": "Shortage",
     "type": "defense",
     "img": "./images/defense/quarry.png"
   },
   {
     "name": "Quarry",
+    "defence": "Shortage",
     "type": "defense",
     "img": "./images/defense/quarry.png"
   },
-  {  
+  {
     "name": "Apothecary",
+    "defence": "Plague",
     "type": "defense",
     "img": "./images/defense/apothecary.png"
   },
-  {  
+  {
     "name": "Apothecary",
+    "defence": "Plague",
     "type": "defense",
     "img": "./images/defense/apothecary.png"
   },
-  {  
+  {
     "name": "Apothecary",
+    "defence": "Plague",
     "type": "defense",
     "img": "./images/defense/apothecary.png"
   },
   {
     "name": "Thaw",
+    "defence": "Frost",
     "type": "defense",
-    "img": "./images/defense/thaw.png"      
+    "img": "./images/defense/thaw.png"
   },
   {
     "name": "Thaw",
+    "defence": "Frost",
     "type": "defense",
-    "img": "./images/defense/thaw.png"      
+    "img": "./images/defense/thaw.png"
   },
   {
     "name": "Thaw",
+    "defence": "Frost",
     "type": "defense",
-    "img": "./images/defense/thaw.png"      
+    "img": "./images/defense/thaw.png"
   },
   {
     "name": "Carpenter",

@@ -22,6 +22,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const [player2Tools, setPlayer2Tools] = useState([]);
 <<<<<<< HEAD
 
+    const [attackedCard, setAttacked] = useState([]);
+    const [defenceCard, setDefenceCard] = useState([]);
     const [updatedDiscardDeck, setUpdatedDiscardDeck] = useState([]);
     
     // PLAYER 1 
@@ -42,7 +44,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 >>>>>>> 9ab2ec65e75a7f026eb756c13e3519fe5f926fcb
 
     const onMaterialCardClick = function(card){
-        if(!player1Materials.includes(card)){
+        const materialNames = player1Materials.map(card => card.name);
+        if (!materialNames.includes(card.name)){
             const copiedPlayer1Materials = [...player1Materials, card];
             setPlayer1Materials(copiedPlayer1Materials);
             removeCardFromPlayer(card);
