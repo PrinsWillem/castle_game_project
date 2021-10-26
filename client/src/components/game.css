@@ -1,0 +1,96 @@
+.deck{
+    grid-area:deck;
+}
+.game{
+    grid-area:game;
+}
+.discard{
+    grid-area:discard;
+}
+#grid-container{
+    display:grid;
+    grid-template-areas:
+        'deck game discard';
+    grid-template-columns:1fr 8fr 1fr;
+}
+.dealing-deck{
+    position:relative;
+}
+.deck-card{
+    position:absolute;
+    list-style:none;
+}
+.deck-card img{
+    width:125px;
+    border-radius:5px;
+}
+.player{
+    margin:0 auto;
+    text-align:center;
+}
+.player2{
+    margin:0 auto;
+    text-align:center;
+}
+.player-hand{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    align-content:flex-start;
+}
+.player2-hand{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    align-content:flex-start;
+}
+#player-table{
+    display:grid;
+    grid-template-areas:
+        'player-material player-tools';
+    grid-template-columns:50%;
+}
+#player2-table{
+    display:grid;
+    grid-template-areas:
+        'computer-material computer-tools';
+    grid-template-columns:50%;
+}
+.player-material{
+    grid-area:player-material;
+}
+.player2-material{
+    grid-area:computer-material;
+}
+.player-tools{
+    grid-area:player-tools;
+}
+.player2-tools{
+    grid-area:computer-tools;
+}
+.player-card{
+    width:175px;
+    list-style:none;
+    padding:5px;
+}
+.player2-card{
+    width:175px;
+    list-style:none;
+    padding:5px;
+}
+.player-card img{
+    width:50%;
+    border-radius:5px;
+    transition:0.5s linear;
+}
+.player2-card img{
+    width:50%;
+    border-radius:5px;
+    transition:0.5s linear;
+}
+
+

@@ -8,13 +8,14 @@ const createrRouter = require('./helpers/create_router.js');
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static('public'));
 
 MongoClient.connect('mongodb://localhost:27017', { useUnifiedTopology: true })
     .then((client) => {
         const db = client.db('castle_game');
         const cardsCollection = db.collection('cards');
         const cardsRouter = createrRouter(cardsCollection);
-        app.use('/cards', cardsRouter);
+        app.use('/api/cards', cardsRouter);
     })
     .catch(console.error);
 
