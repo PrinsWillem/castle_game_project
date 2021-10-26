@@ -11,7 +11,7 @@
     display:grid;
     grid-template-areas:
         'deck game discard';
-    grid-template-columns:2fr 6fr 2fr;
+    grid-template-columns:1fr 8fr 1fr;
 }
 .dealing-deck{
     position:relative;
@@ -24,45 +24,29 @@
     width:125px;
     border-radius:5px;
 }
+.player{
+    margin:0 auto;
+    text-align:center;
+}
+.player2{
+    margin:0 auto;
+    text-align:center;
+}
 .player-hand{
-    width:100%;
-    padding:25px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    align-content:flex-start;
 }
-.player-card{
-    display:inline;
-    list-style:none;
-    padding:5px;
-}
-.player-card img{
-    width:15%;
-    border-radius:5px;
-    transition:0.5s linear;
-}
-.computer-hand{
-    width:100%;
-    padding:25px;
-}
-.computer-card{
-    display:inline;
-    list-style:none;
-    padding:5px;
-}
-.computer-card img{
-    width:15%;
-    border-radius:5px;
-    transition:0.5s linear;
-}
-#computer-table{
-    display:grid;
-    grid-template-areas:
-        'computer-material computer-tools';
-    grid-template-columns:50%;
-}
-.computer-material{
-    grid-area:computer-material;
-}
-.computer-tools{
-    grid-area:computer-tools;
+.player2-hand{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    align-content:flex-start;
 }
 #player-table{
     display:grid;
@@ -70,9 +54,43 @@
         'player-material player-tools';
     grid-template-columns:50%;
 }
+#player2-table{
+    display:grid;
+    grid-template-areas:
+        'computer-material computer-tools';
+    grid-template-columns:50%;
+}
 .player-material{
     grid-area:player-material;
+}
+.player2-material{
+    grid-area:computer-material;
 }
 .player-tools{
     grid-area:player-tools;
 }
+.player2-tools{
+    grid-area:computer-tools;
+}
+.player-card{
+    width:175px;
+    list-style:none;
+    padding:5px;
+}
+.player2-card{
+    width:175px;
+    list-style:none;
+    padding:5px;
+}
+.player-card img{
+    width:50%;
+    border-radius:5px;
+    transition:0.5s linear;
+}
+.player2-card img{
+    width:50%;
+    border-radius:5px;
+    transition:0.5s linear;
+}
+
+
