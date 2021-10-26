@@ -4,9 +4,9 @@ const Player1Hand = ({player1Hand, onMaterialCardClick, onToolCardClick, onDisca
 
     const handleClickPlay = function(card){
         if(card.type === "material"){
-            onMaterialCardClick(card)
-        } else if(card.type === "tool"){
-            onToolCardClick(card)
+            onMaterialCardClick(card);
+        }else if(card.type === "tool"){
+            onToolCardClick(card);
         }
     };
 
