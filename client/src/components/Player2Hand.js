@@ -21,7 +21,7 @@ const Player2Hand = ({player2Hand, onMaterialCardClick2, onToolCardClick2, onDis
     const player2Cards = player2Hand.map((card) => {
         return(
             <div className="player2-card" key={card._id}>
-                <p><button onClick={() => {handleClickDiscard(card)}} type="button">Discard</button></p>
+                <p><button className="discard-button" onClick={() => {handleClickDiscard(card)}} type="button">&#215;</button></p>
                 <img onClick={() => {handleClickPlay2(card)}} src={card.img} alt={card.name}/>
             </div>
         );

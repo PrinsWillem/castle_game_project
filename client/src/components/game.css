@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MedievalSharp&display=swap');
+
 .deck{
     grid-area: deck;
 }
 .game{
     grid-area: game;
+    margin-left: 25px;
 }
 #grid-container{
     display: grid;
     grid-template-areas:
         'deck game';
     grid-template-columns: 1fr 9fr;
+    background-color: #282c34;
 }
 .dealing-deck{
     position: relative;
@@ -16,12 +20,12 @@
 .deck-card{
     position: absolute;
     list-style: none;
-    top: 300px;
+    top: 230px;
     left: 50px;
 }
 .deck-card img{
-    width:  125px;
-    border-radius:5px;
+    width: 125px;
+    border-radius: 5px;
 }
 .player{
     margin: 0 auto;
@@ -247,10 +251,53 @@
 }
 .player-points{
     position: absolute;
-    padding: 15px;
+    padding: 20px;
     background: #282c34;
     border-radius: 5px;
-    font-size: 22px;
-    color: white;
+    font-family:Lato;
+    font-weight:900;
+    font-size: 30px;
+    color: rgb(168,134,91);
     margin-left: 90px;
 }
+.discard-button{
+    position: absolute;
+    margin-top: -18px;
+    margin-left: 28px;
+    padding: 0 10px 2px 10px;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(71,60,54);
+    transition: 1s;
+    text-align: center;
+    border: 1px solid rgb(71,60,54);
+    border-radius: 25px;
+    background-color: rgb(168,134,91);
+}
+.discard-button:hover{ 
+    cursor: pointer;
+    color: rgb(168,134,91);
+    opacity: 100%;
+    background-color: rgb(71,60,54);
+    border: 1px solid rgb(71,60,54);
+}
+.draw-button{
+    margin-bottom: 8px;
+    padding: 10px 20px 12px 20px;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(71,60,54);
+    transition: 1s;
+    text-align: center;
+    border: 1px solid rgb(71,60,54);
+    border-radius: 10px;
+    background-color: #282c34;
+  }
+  .draw-button:hover{ 
+    cursor: pointer;
+    color: rgb(168,134,91);
+    background-color: #282c34;
+    border: 1px solid rgb(168,134,91);
+  }

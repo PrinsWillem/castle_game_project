@@ -1,42 +1,41 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MedievalSharp&display=swap');
+
+html, body{
+  margin:0 auto;
   background-color: #282c34;
 }
-
-.App {
+.App{
   text-align: center;
+  background-color: rgb(168,134,91);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-body{
+  margin: 0 auto;
+  padding-top: 125px;
+  width: 70%;
+  color: rgb(71,60,54);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-body h1{
+  padding-top: 100px;
+  font-family: MedievalSharp;
+  font-size: 60px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.play-button{
+  margin:75px 0 5px 0;
+  padding:20px 35px 20px 35px;
+  font-family:MedievalSharp;
+  font-size:30px;
+  font-weight:bold;
+  color:rgb(71,60,54);
+  transition:1s;
+  text-align:center;
+  border:3px solid rgb(71,60,54);
+  border-radius:25px;
+  background-color:rgb(168,134,91);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play-button:hover{ 
+  cursor: pointer;
+  color:rgb(168,134,91);
+  opacity:100%;
+  background-color:rgb(71,60,54);
+  border:3px solid rgb(71,60,54);
 }

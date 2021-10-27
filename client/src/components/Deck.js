@@ -12,7 +12,9 @@ const Deck = ({updatedDeck, onDeckCardClick, onDeckCardClick2}) => {
 
     const cardsDeck = updatedDeck.map((card) => {
         return(
-            <li className="deck-card" key={card._id}><button onClick={() => {handleClickPlay2(card)}} type="take-card">Take Card</button><br/><img src={"./images/back_image/castle.png"} alt={card.name}/><br/><button onClick={() => {handleClickPlay(card)}} type="take-card">Take Card</button></li>
+            <li className="deck-card" key={card._id}><button className="draw-button" onClick={() => {handleClickPlay2(card)}} type="button">Draw</button>
+            <p><img src={"./images/back_image/castle.png"} alt={card.name}/></p>
+            <button className="draw-button" onClick={() => {handleClickPlay(card)}} type="button">Draw</button></li>
         )
     });
 
