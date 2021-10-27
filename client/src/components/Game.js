@@ -26,6 +26,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const [player2Attack, setPlayer2Attack] = useState([]);
     const [player1Defense, setPlayer1Defense] = useState([]);
     const [player2Defense, setPlayer2Defense] = useState([]);
+
+    const [gameWon, setGameWon] = useState("none");
     
     // PLAYER 1
     const onMaterialCardClick = function(card){
@@ -193,61 +195,92 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         setUpdatedDeck(updatedDeck);
     };
 
+    // WINNER
+    const assignWinner = function(){
+        const castleMaterialRequired = ['Labour', 'Money', 'Mortar', 'Stone', 'Wood'];
+        const materialNamesPlayer1 = player1Materials.map(card => card.name).sort();
+        const materialNamesPlayer2 = player2Materials.map(card => card.name).sort();
+        if(castleMaterialRequired.join() === materialNamesPlayer1.join()){
+            setGameWon("Player1")
+        } else if(castleMaterialRequired.join() === materialNamesPlayer2.join()){
+            setGameWon("Player2")
+        }
+    };
+
+    // USE EFFECT
     useEffect(() => {
         setUpdatedDeck(deckAfterDealing)
     }, [deckAfterDealing]);
+
     useEffect(() => {
         setPlayer1Hand(firstPlayerHand)
     }, [firstPlayerHand]);
+
     useEffect(() => {
         setPlayer2Hand(firstComputerHand)
-    }, [firstComputerHand])
+    }, [firstComputerHand]);
+
+    useEffect(() => {
+        assignWinner()
+        //eslint-disable-next-line
+    }, [player1Materials, player2Materials]);
     
-    return(
-        <div id="grid-container">
-            <div className="deck">
-                <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick} onDeckCardClick2={onDeckCardClick2}/>
-            </div>
-            <div className="game">
-                <div className="player2">
-                    <div className="player2-hand">
-                        <Player2Hand player2Hand={player2Hand} onMaterialCardClick2={onMaterialCardClick2} onToolCardClick2={onToolCardClick2} onAttackCardClick2={onAttackCardClick2} onDefenseCardClick2={onDefenseCardClick2} onDiscardCardClick2={onDiscardCardClick2} player2Attack={player2Attack} player2Defense={player2Defense}/>
-                    </div>
-                    <div id="player2-table">
-                        <div className="player2-material">
-                            <div className="player-container">
-                                <Player2Materials player2Materials={player2Materials}/>
+    if(gameWon === "Player1"){
+        return(
+            <h1>Player 1 Wins</h1>
+        )
+    }else if(gameWon === "Player2"){
+        return(
+            <h1>Player 2 Wins</h1>
+        )
+    }else{
+
+        return(
+            <div id="grid-container">
+                <div className="deck">
+                    <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick} onDeckCardClick2={onDeckCardClick2}/>
+                </div>
+                <div className="game">
+                    <div className="player2">
+                        <div className="player2-hand">
+                            <Player2Hand player2Hand={player2Hand} onMaterialCardClick2={onMaterialCardClick2} onToolCardClick2={onToolCardClick2} onAttackCardClick2={onAttackCardClick2} onDefenseCardClick2={onDefenseCardClick2} onDiscardCardClick2={onDiscardCardClick2} player2Attack={player2Attack} player2Defense={player2Defense}/>
+                        </div>
+                        <div id="player2-table">
+                            <div className="player2-material">
+                                <div className="player-container">
+                                    <Player2Materials player2Materials={player2Materials}/>
+                                </div>
+                            </div>
+                            <div className="player2-tools">
+                                <div className="player-container">
+                                    <Player2Tools player2Tools={player2Tools}/>
+                                        <Player2Points player2Tools={player2Tools}/>
+                                </div>
                             </div>
                         </div>
-                        <div className="player2-tools">
-                            <div className="player-container">
-                                <Player2Tools player2Tools={player2Tools}/>
-                                    <Player2Points player2Tools={player2Tools}/>
+                    </div>
+                    <div className="player">
+                        <div id="player-table">
+                            <div className="player-material">
+                                <div className="player-container">
+                                    <Player1Materials player1Materials={player1Materials}/>
+                                </div>
                             </div>
+                            <div className="player-tools">
+                                <div className="player-container">
+                                    <Player1Tools player1Tools={player1Tools}/>
+                                        <Player1Points player1Tools={player1Tools}/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="player-hand">
+                            <Player1Hand player1Hand={player1Hand} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
                         </div>
                     </div>
                 </div>
-                <div className="player">
-                    <div id="player-table">
-                        <div className="player-material">
-                            <div className="player-container">
-                                <Player1Materials player1Materials={player1Materials}/>
-                            </div>
-                        </div>
-                        <div className="player-tools">
-                            <div className="player-container">
-                                <Player1Tools player1Tools={player1Tools}/>
-                                    <Player1Points player1Tools={player1Tools}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="player-hand">
-                        <Player1Hand player1Hand={player1Hand} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
-                    </div>
-                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 export default Game;

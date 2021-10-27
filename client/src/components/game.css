@@ -5,7 +5,6 @@
     grid-area: game;
 }
 #grid-container{
-    margin: 50px;
     display: grid;
     grid-template-areas:
         'deck game';
@@ -17,6 +16,8 @@
 .deck-card{
     position: absolute;
     list-style: none;
+    top: 300px;
+    left: 50px;
 }
 .deck-card img{
     width:  125px;
@@ -61,9 +62,8 @@
     grid-template-columns: 50%;
 }
 .player-material{
-    margin: 20px;
+    margin: 30px;
     grid-area: player-material;
-    background-color: grey;
     border-radius: 5px;
 }
 .player-material-container{
@@ -75,9 +75,8 @@
     align-content: center;
 }
 .player2-material{
-    margin: 20px;
+    margin: 30px;
     grid-area: computer-material;
-    background-color: grey;
     border-radius: 5px;
 }
 .player2-material-container{
@@ -91,10 +90,9 @@
 .player-tools{
     margin: 20px;
     grid-area: player-tools;
-    background-color: grey;
-    border-radius: 5px;
 }
 .player-container{
+    height: 125px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -103,6 +101,7 @@
     align-content: center;
 }
 #player2-container{
+    height: 125px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -113,8 +112,6 @@
 .player2-tools{
     margin: 20px;
     grid-area: computer-tools;
-    background-color: grey;
-    border-radius: 5px;
 }
 .player-card{
     flex-grow: 1;
@@ -147,6 +144,7 @@
     transform: translateY(10px);
 }
 .player-card-table{
+    position: absolute;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
@@ -188,23 +186,23 @@
     padding: 5px;
 }
 .Money img{
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
 }
 .Wood img{
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
 }
 .Stone img{
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
 }
 .Mortar img{
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
 }
 .Labour img{
-    width: 50px;
+    width: 60px;
     border-radius: 5px;
 }
 .Bankruptcy{
@@ -249,9 +247,10 @@
 }
 .player-points{
     position: absolute;
-    padding: 20px 25px 20px 25px;
+    padding: 15px;
     background: #282c34;
-    border-radius: 30px;
-    margin-right:-100px;
+    border-radius: 5px;
+    font-size: 22px;
     color: white;
+    margin-left: 90px;
 }
