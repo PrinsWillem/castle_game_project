@@ -1,96 +1,257 @@
 .deck{
-    grid-area:deck;
+    grid-area: deck;
 }
 .game{
-    grid-area:game;
-}
-.discard{
-    grid-area:discard;
+    grid-area: game;
 }
 #grid-container{
-    display:grid;
+    margin: 50px;
+    display: grid;
     grid-template-areas:
-        'deck game discard';
-    grid-template-columns:1fr 8fr 1fr;
+        'deck game';
+    grid-template-columns: 1fr 9fr;
 }
 .dealing-deck{
-    position:relative;
+    position: relative;
 }
 .deck-card{
-    position:absolute;
-    list-style:none;
+    position: absolute;
+    list-style: none;
 }
 .deck-card img{
-    width:125px;
+    width:  125px;
     border-radius:5px;
 }
 .player{
-    margin:0 auto;
-    text-align:center;
+    margin: 0 auto;
+    text-align: center;
 }
 .player2{
-    margin:0 auto;
-    text-align:center;
+    margin: 0 auto;
+    text-align: center;
 }
 .player-hand{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:flex-start;
-    align-content:flex-start;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .player2-hand{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:flex-start;
-    align-content:flex-start;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 #player-table{
-    display:grid;
+    display: grid;
     grid-template-areas:
         'player-material player-tools';
-    grid-template-columns:50%;
+    grid-template-columns: 50%;
 }
 #player2-table{
-    display:grid;
+    display: grid;
     grid-template-areas:
         'computer-material computer-tools';
-    grid-template-columns:50%;
+    grid-template-columns: 50%;
 }
 .player-material{
-    grid-area:player-material;
+    margin: 20px;
+    grid-area: player-material;
+    background-color: grey;
+    border-radius: 5px;
+}
+.player-material-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .player2-material{
-    grid-area:computer-material;
+    margin: 20px;
+    grid-area: computer-material;
+    background-color: grey;
+    border-radius: 5px;
+}
+.player2-material-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .player-tools{
-    grid-area:player-tools;
+    margin: 20px;
+    grid-area: player-tools;
+    background-color: grey;
+    border-radius: 5px;
+}
+.player-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#player2-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .player2-tools{
-    grid-area:computer-tools;
+    margin: 20px;
+    grid-area: computer-tools;
+    background-color: grey;
+    border-radius: 5px;
 }
 .player-card{
-    width:175px;
-    list-style:none;
-    padding:5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
 }
 .player2-card{
-    width:175px;
-    list-style:none;
-    padding:5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
 }
 .player-card img{
-    width:50%;
-    border-radius:5px;
-    transition:0.5s linear;
+    width: 90px;
+    border-radius: 5px;
+    transition: 0.5s linear;
+}
+.player-card img:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
 }
 .player2-card img{
-    width:50%;
-    border-radius:5px;
-    transition:0.5s linear;
+    width: 90px;
+    border-radius: 5px;
+    transition: 0.5s linear;
 }
-
-
+.player2-card img:hover{
+    cursor: pointer;
+    transform: translateY(10px);
+}
+.player-card-table{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.player-card-table img{
+    width: 90px;
+    border-radius: 5px;
+    transition: 0.5s linear;
+}
+.Money{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.Wood{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.Stone{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.Mortar{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.Labour{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 5px;
+}
+.Money img{
+    width: 50px;
+    border-radius: 5px;
+}
+.Wood img{
+    width: 50px;
+    border-radius: 5px;
+}
+.Stone img{
+    width: 50px;
+    border-radius: 5px;
+}
+.Mortar img{
+    width: 50px;
+    border-radius: 5px;
+}
+.Labour img{
+    width: 50px;
+    border-radius: 5px;
+}
+.Bankruptcy{
+    position: absolute;
+}
+.Fire{
+    position: absolute;
+}
+.Shortage{
+    position: absolute;
+}
+.Frost{
+    position: absolute;
+}
+.Plague{
+    position: absolute;
+}
+.Bankruptcy img{
+    width: 90px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+.Fire img{
+    width: 90px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+.Shortage img{
+    width: 90px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+.Frost img{
+    width: 90px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+.Plague img{
+    width: 90px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+.player-points{
+    position: absolute;
+    padding: 20px 25px 20px 25px;
+    background: #282c34;
+    border-radius: 30px;
+    margin-right:-100px;
+    color: white;
+}

@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Player2Hand = ({player2Hand, onMaterialCardClick2, onToolCardClick2, onDiscardCardClick2}) => {
+const Player2Hand = ({player2Hand, onMaterialCardClick2, onToolCardClick2, onDiscardCardClick2, onAttackCardClick2, onDefenseCardClick2}) => {
 
     const handleClickPlay2 = function(card){
         if(card.type === "material"){
-            onMaterialCardClick2(card)
+            onMaterialCardClick2(card);
         } else if(card.type === "tool"){
-            onToolCardClick2(card)
+            onToolCardClick2(card);
+        } else if(card.type === "attack"){
+            onAttackCardClick2(card);
+        } else if(card.type === "defense"){
+            onDefenseCardClick2(card);
         }
     };
 
@@ -16,9 +20,9 @@ const Player2Hand = ({player2Hand, onMaterialCardClick2, onToolCardClick2, onDis
 
     const player2Cards = player2Hand.map((card) => {
         return(
-            <div className="player2-card" key={card._id}><img src={card.img} alt={card.name}/>
-                <p><button onClick={() => {handleClickPlay2(card)}} type="button">Play</button>
-                <button onClick={() => {handleClickDiscard(card)}} type="button">Discard</button></p>
+            <div className="player2-card" key={card._id}>
+                <p><button onClick={() => {handleClickDiscard(card)}} type="button">Discard</button></p>
+                <img onClick={() => {handleClickPlay2(card)}} src={card.img} alt={card.name}/>
             </div>
         );
         

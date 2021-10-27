@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Castle</h1>
       {gameStarted ? <GameContainer/> :
         <main>
           <button onClick={handleStartGameClick}>Play</button>
