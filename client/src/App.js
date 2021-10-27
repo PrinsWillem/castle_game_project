@@ -14,65 +14,90 @@ function App() {
     <div className="App">
       {gameStarted ? <GameContainer/> :
         <main className="App-body">
-          <img src="./images/index.png" height="650" alt="Castle Logo"/>
+          <img src="./images/index-(1).gif" height="650" alt="Castle Logo"/>
           <p><button className="play-button" onClick={handleStartGameClick}>Play</button></p>
           
           <h1>Game Rules</h1>
           
           <h2>Goal of the game</h2>
           <p>Be the first to build your castle</p>
-          <p>To ensure your victory you must complete 2 objectives:</p>
+          <p>To ensure your victory you must complete <b>2 objectives</b>:</p>
+          <p><b>1. Amassing 20 points or more of technology</b></p>
             <ul>
-                <li>Gathering all necessary raw material on your building site (Yellow/Material cards) these include Money, Wood, Stone, Labour and Mortar</li>
-                <li>Amassing 20 points or more of technology(Blue/Technology cards) to reach your goal</li>
+              <li>
+                <img src="./images/tools/treadwheel_crane.png" height="150" alt="Treadwheel Crane Card"/>
+                <img src="./images/tools/wheelbarrow.png" height="150" alt="Wheelbarrow Card"/>
+                <img src="./images/tools/carpenter.png" height="150" alt="Carpenter Card"/>
+                <img src="./images/tools/blacksmith.png" height="150" alt="Blacksmith Card"/>
+              </li>
+          <p><b>2. Gathering all necessary material cards</b></p>
+              <li>
+                <img src="./images/material/money.png" height="150" alt="Money Card"/>
+                <img src="./images/material/labour.png" height="150" alt="Labour Card"/>
+                <img src="./images/material/wood.png" height="150" alt="Wood Card"/>
+                <img src="./images/material/stone.png" height="150" alt="Stone Card"/>
+                <img src="./images/material/mortar.png" height="150" alt="Mortar Card"/>
+              </li>
             </ul>
-          <p>Your opponent can also sabotage your materials by using attack cards(red cards)</p>
+          <p>Your opponent can also <b>sabotage</b> your material cards by using an <b>attack card</b></p>
           <p>These attacks are:</p>
             <ul>
                 <li>
-                    Bankruptcy to sabotage Money 
+                  <img src="./images/attack/bankruptcy.png" height="150" alt="Bankruptcy Card"/>
+                  <img src="./images/attack/plague.png" height="150" alt="Plague Card"/>
+                  <img src="./images/attack/fire.png" height="150" alt="Fire Card"/>
+                  <img src="./images/attack/shortage.png" height="150" alt="Shortage Card"/>
+                  <img src="./images/attack/frost.png" height="150" alt="Frost Card"/>
                 </li>
                 <li>
-                    Fire to sabotage Wood 
+                    <em>Bankruptcy to sabotage Money</em>
                 </li>
                 <li>
-                    Shortage to sabotage Stone 
+                    <em>Plague to sabotage Labour</em>
                 </li>
                 <li>
-                    Plague to sabotage Labour 
+                    <em>Fire to sabotage Wood</em>
                 </li>
                 <li>
-                    Frost to sabotage Mortar
+                    <em>Shortage to sabotage Stone</em>
+                </li>
+                <li>
+                    <em>Frost to sabotage Mortar</em>
                 </li>
             </ul>
-          <p>Luckily you also have defence(Green) cards you can use to thwart the enemies attack on your materials</p>
-          <p>These defence cards include</p>
+          <p>Luckily you also have <b>defence</b> cards that you can use to thwart the enemies attack on your materials</p>
+          <p>These defence cards include:</p>
           <ul>
               <li>
-                Loan to defend against Bankruptcy
+                <img src="./images/defense/loan.png" height="150" alt="Loan Card"/>
+                <img src="./images/defense/apothecary.png" height="150" alt="Apothecary Card"/>
+                <img src="./images/defense/water.png" height="150" alt="Water Card"/>
+                <img src="./images/defense/quarry.png" height="150" alt="Quarry Card"/>
+                <img src="./images/defense/thaw.png" height="150" alt="Thaw Card"/>
               </li>
               <li>
-                Water to defend against Fire
+                <em>Loan to defend against Bankruptcy</em>
               </li>
               <li>
-                Quarry to defend against Shortage
+                <em>Apothecary to defend against Plague</em>
               </li>
               <li>
-                Apothecary to defend against Plague
+                <em>Water to defend against Fire</em>
               </li>
               <li>
-                Thaw to defend against Frost
+                <em>Quarry to defend against Shortage</em>
+              </li>
+              <li>
+                <em>Thaw to defend against Frost</em>
               </li>
           </ul>
-        <p>If an attack is successful and the player has no defence the material card that was attacked is discarded along with the attack card used by your opponent</p>
-        <p>If the player has a defence card to protect his materials then both the defence and attack cards are discarded and the material card stays in play</p>
+        <p>If an attack is successful and the player has no defence, the material card that was attacked is discarded along with the attack card used by your opponent</p>
+        <p>If the player has a defence card to protect his materials, then both the defence and attack cards are discarded and the material card stays in play</p>
 
         <h3>Game Walkthrough</h3>
 
-        <p>At the start of the game each player draws 5 cards,</p>
-        <p>each turn the player must draw a card and play a card, if they have no cards they can play they must discard one from their hand </p>
-        <p>a player must have no more than 5 cards in their hand at any time</p>
-        <p>If the deck runs out of cards the players draw from the discarded pile</p>
+        <p>At the start of the game each player draws 5 cards.</p>
+        <p>Each turn a player must draw a card and play a card, if the players have no cards to play they must discard one from their hand.</p>
         </main>}
     </div>
   );
