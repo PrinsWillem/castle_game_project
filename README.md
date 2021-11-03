@@ -9,3 +9,21 @@ Introduction
 * [Brief](#Brief)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
+
+## About us
+Text
+
+## Project
+Text
+
+## Gameplay
+Text
+
+## Brief
+Text
+
+## Technologies
+Text
+
+## Setup
+Text
