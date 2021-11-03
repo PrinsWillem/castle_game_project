@@ -200,12 +200,20 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         const castleMaterialRequired = ['Labour', 'Money', 'Mortar', 'Stone', 'Wood'];
         const materialNamesPlayer1 = player1Materials.map(card => card.name).sort();
         const materialNamesPlayer2 = player2Materials.map(card => card.name).sort();
-        if(castleMaterialRequired.join() === materialNamesPlayer1.join()){
+        
+        let sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+        let sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+
+        if(castleMaterialRequired.join() === materialNamesPlayer1.join() && sum1 >= 20){
             setGameWon("Player1")
-        } else if(castleMaterialRequired.join() === materialNamesPlayer2.join()){
+        } else if(castleMaterialRequired.join() === materialNamesPlayer2.join() && sum2 >= 20){
             setGameWon("Player2")
         }
     };
+
+    const handleStartGameClick = () => {
+        window.location.reload();
+    }
 
     // USE EFFECT
     useEffect(() => {
@@ -223,15 +231,23 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     useEffect(() => {
         assignWinner()
         //eslint-disable-next-line
-    }, [player1Materials, player2Materials]);
+    }, [player1Materials, player2Materials, player1Tools, player2Tools]);
     
     if(gameWon === "Player1"){
         return(
-            <h1>Player 1 Wins</h1>
+            <div className="winner">
+                <img src="./images/index.png" height="475" alt="Winner"/>
+                <h1>Player 1 wins</h1>
+                <button className="play-button" onClick={handleStartGameClick}>Start a new Castle</button>
+            </div>
         )
     }else if(gameWon === "Player2"){
         return(
-            <h1>Player 2 Wins</h1>
+            <div className="winner">
+                <img src="./images/index.png" height="475" alt="Winner"/>
+                <h1>Player 2 wins</h1>
+                <button className="play-button" onClick={handleStartGameClick}>Start a new Castle</button>
+            </div>
         )
     }else{
 
