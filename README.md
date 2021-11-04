@@ -5,6 +5,7 @@ Introduction
 ## Contents
 * [About us](#About_us)
 * [Project](#Project)
+* [Original game](#Original_game)
 * [Gameplay](#Gameplay)
 * [Brief](#Brief)
 * [Technologies](#Technologies)
