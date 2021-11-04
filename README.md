@@ -3,9 +3,9 @@
 Introduction
 
 ## Contents
-* [About us](#About us)
+* [About_us](#About us)
 * [Project](#Project)
-* [Original game](#Original game)
+* [Original_game](#Original game)
 * [Gameplay](#Gameplay)
 * [Brief](#Brief)
 * [Technologies](#Technologies)
