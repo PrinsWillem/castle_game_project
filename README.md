@@ -24,7 +24,7 @@ The Castle Card Game is an original game created by Loic Marles and designed by 
 
 ### Rules
 
-The Goal is to be the first to build your castle.
+**The goal is to be the first to build your castle**.
 
 To ensure your victory you must complete **2 objectives**:
 1. Gathering all necessary material cards (Money, Wood, Stone, Mortar, Labour);
