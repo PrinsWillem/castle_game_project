@@ -24,7 +24,13 @@ Text
 Text
 
 ## Technologies
-Text
+The project was created with:
+- JavaScript;
+- React;
+- Node.js;
+- MongoDB;
+- Insomnia;
+- HTML/CSS.
 
 ## Setup
 Text
