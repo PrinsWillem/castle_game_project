@@ -50,9 +50,9 @@ If the player has a defence card to protect his materials, then both the defence
 
 ### Walkthrough
 
-At the start of the game each player get 5 cards in hand.
+At the start of the game each player gets 5 cards in hand.
 
-Each turn a player must play a card on the table and draw a new card. If the players have no cards to play they must discard one from their hand.
+Each turn a player must play a card on the table and draws a new card. If a player has no cards to play he must discard one from their hand.
 
 ## Brief
 Text
