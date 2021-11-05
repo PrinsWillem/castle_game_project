@@ -1,8 +1,8 @@
 # Castle Card Game
 
-![]()
-
 Introduction
+
+![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/castle-logo.png?raw=true)
 
 ## Contents
 * [About us](#About_us)
