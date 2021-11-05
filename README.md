@@ -73,8 +73,13 @@ The project was created with:
 
 > Open repository in Visual Studio Code
 
-navigate into your server folder and run the next command in your vscode terminal
+navigate into your server folder and run the next command in your vscode terminal to fill the database
 
 ```
 npm run seeds 
 ```
+To start the server run the next command in your vscode terminal
+```
+npm run server:dev
+```
+
