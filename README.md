@@ -17,7 +17,20 @@ Introduction
 Text
 
 ## Project
-Text
+> JavaScript Group Project
+Aims
+* To gain experience working in a team with other developers - to understand some of the challenges this creates and ways to overcome them
+* To have the opportunity to use Agile working methods
+* To become more confident using Git/GitHub for a multi person project
+* To consolidate learning from the JavaScript module
+* To investigate some JavaScript libraries you haven't used before (learning how to read docs is an invaluable skill)
+
+Expectations
+* All members of the group contributing to the planning, development and presentation of the project
+* Members supporting each other to make sure everyone can get the most they can from the week
+* TDD - unit testing of models where appropriate
+* Some application of Agile concepts e.g. a morning standup, sprints, a kanban board (Trello)
+* Regular Git commits and use of branches with frequent merges. We are looking to see at least 100 commits.
 
 ## Original Game
 The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
