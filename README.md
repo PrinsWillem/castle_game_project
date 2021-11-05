@@ -83,3 +83,9 @@ To start the server run the next command in your vscode terminal
 npm run server:dev
 ```
 
+> To check if the server runs the api correctly you can go to http://localhost:5000/api/cards 
+
+To start te game go to client folder and run the next command
+```
+npm start
+```
