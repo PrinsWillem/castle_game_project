@@ -34,8 +34,8 @@ MVP
 * Should be able to show a winner at the end of the game
 
 Extensions
-Add different type of cards to make the game more complex
-Track the number of wins by each player
+* Add different type of cards to make the game more complex
+* Track the number of wins by each player
 
 ## Original Game
 The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
