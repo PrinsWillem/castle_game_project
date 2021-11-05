@@ -92,17 +92,17 @@ Write your own MVP with some specific goals to be achieved based on the game you
 You might use persistence to keep track of the state of the game or track scores/wins. Other extended features will depend on the game you choose.
 
 ### **Our Brief for project:**
-An educational card game where the players try to build their card game faster than the opponent
+An educational card game where the players try to build their castle faster than their opponent.
 
 #### MVP
-* Should be able to display the rule
-* Should be able to deal a deck of random cards for each player
-* Should be able to add points for each player
-* Should be able to show a winner at the end of the game
+* Should be able to display the rule;
+* Should be able to deal a deck of random cards for each player;
+* Should be able to add points for each player;
+* Should be able to show a winner at the end of the game.
 
 #### Extensions
-* Add different type of cards to make the game more complex
-* Track the number of wins by each player
+* Add different type of cards to make the game more complex;
+* Track the number of wins by each player.
 
 ## Technologies
 The project was created with:
