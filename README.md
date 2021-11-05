@@ -69,4 +69,12 @@ The project was created with:
 - HTML/CSS.
 
 ## Setup
-Text
+> Clone repository
+
+> Open repository in Visual Studio Code
+
+navigate into your server folder and run the next command in your vscode terminal
+
+```
+npm run seeds 
+```
