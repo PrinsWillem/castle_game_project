@@ -44,6 +44,8 @@ Your opponent can **sabotage** your material cards by using an **attack card**. 
 - Frost to sabotage Mortar;
 - Plague to sabotage Labour.
 
+![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/attack-cards.png?raw=true)
+
 Luckily you have **defence cards** that you can use to thwart the enemies attack on your materials. These defence cards include:
 - Loan to defend against Bankruptcy;
 - Water to defend against Fire;
