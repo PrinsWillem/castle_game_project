@@ -17,7 +17,7 @@ Introduction
 Text
 
 ## Project
-**Original Brief for project:**
+> **Original Brief for project:**
 
 Create a browser game based on an existing card or dice game. Model and test the game logic and then display it in the browser for a user to interact with.
 
