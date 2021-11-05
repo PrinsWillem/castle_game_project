@@ -17,26 +17,7 @@ Introduction
 Text
 
 ## Project
-> **Original Brief for project:**
-
-Create a browser game based on an existing card or dice game. Model and test the game logic and then display it in the browser for a user to interact with.
-
-Write your own MVP with some specific goals to be achieved based on the game you choose to model.
-
-You might use persistence to keep track of the state of the game or track scores/wins. Other extended features will depend on the game you choose.
-
-> **Our Brief for project:**
-An educational card game where the players try to build their card game faster than the opponent
-
-MVP
-* Should be able to display the rule
-* Should be able to deal a deck of random cards for each player
-* Should be able to add points for each player
-* Should be able to show a winner at the end of the game
-
-Extensions
-* Add different type of cards to make the game more complex
-* Track the number of wins by each player
+Text
 
 ## Original Game
 The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
@@ -89,7 +70,26 @@ At the start of the game each player gets 5 cards in hand.
 Each turn a player must play a card on the table and draws a new card. If a player has no cards to play he must discard one from their hand.
 
 ## Brief
-Text
+> **Original Brief for project:**
+
+Create a browser game based on an existing card or dice game. Model and test the game logic and then display it in the browser for a user to interact with.
+
+Write your own MVP with some specific goals to be achieved based on the game you choose to model.
+
+You might use persistence to keep track of the state of the game or track scores/wins. Other extended features will depend on the game you choose.
+
+> **Our Brief for project:**
+An educational card game where the players try to build their card game faster than the opponent
+
+MVP
+* Should be able to display the rule
+* Should be able to deal a deck of random cards for each player
+* Should be able to add points for each player
+* Should be able to show a winner at the end of the game
+
+Extensions
+* Add different type of cards to make the game more complex
+* Track the number of wins by each player
 
 ## Technologies
 The project was created with:
