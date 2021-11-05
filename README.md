@@ -33,7 +33,7 @@ To ensure your victory you must complete **2 objectives**:
 
 ![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/tool-cards.png?raw=true)
 
-2. Gathering all necessary material cards (Money, Wood, Stone, Mortar, Labour).
+2. Gathering all 5 necessary material cards (Money, Wood, Stone, Mortar, Labour).
 
 ![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/material-cards.png?raw=true)
 
