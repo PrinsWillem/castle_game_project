@@ -14,7 +14,7 @@ Introduction
 * [Setup](#Setup)
 
 ## About us
-Text
+A CodeClan group project developed by original designer of the game Anthony Byledbal along with classmates Willem Prins and Neil Hanlon.
 
 ## Project
 ### JavaScript Group Project
@@ -33,7 +33,7 @@ Text
 * Regular Git commits and use of branches with frequent merges.
 
 ## Original Game
-The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
+The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game with which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but found its way to the digital world.
 
 ## Gameplay
 
@@ -80,7 +80,7 @@ If the player has a defence card to protect his materials, then both the defence
 
 At the start of the game each player gets 5 cards in hand.
 
-Each turn a player must play a card on the table and draws a new card. If a player has no cards to play he must discard one from their hand.
+Each turn a player must play a card on the table and draw a new card. If a player has no cards to play they must discard one from their hand.
 
 ## Brief
 ### **Original Brief for project:**
@@ -95,7 +95,7 @@ You might use persistence to keep track of the state of the game or track scores
 An educational card game where the players try to build their castle faster than their opponent.
 
 #### MVP
-* Should be able to display the rule;
+* Should be able to display the rules;
 * Should be able to deal a deck of random cards for each player;
 * Should be able to add points for each player;
 * Should be able to show a winner at the end of the game.
@@ -118,21 +118,21 @@ The project was created with:
 
 > Open repository in Visual Studio Code
 
-navigate into your server folder via vscode terminal and after run the next command to fill the database
+navigate into your server folder via vscode terminal and run the command below to fill the database
 ```
 npm run seeds 
 ```
 
-To start the server run the next command in your vscode terminal
+To start the server run the command below in your vscode terminal
 ```
 npm run server:dev
 ```
 
 > To check if the server runs the api correctly you can go to http://localhost:5000/api/cards in your browser
 
-To start te game go to client folder via vscode terminal and after run the next command to start the game
+To start the game go to the client folder via vscode terminal and after run the command below to start the game
 ```
 npm start
 ```
 
-> The browser should open automaticly, if not you can go to http://localhost:3000 in your browser
+> The browser should open automatically, if not you can go to http://localhost:3000 in your browser
