@@ -46,6 +46,8 @@ To ensure your victory you must complete **2 objectives**:
 
 ![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/material-cards.png?raw=true)
 
+#### Attack Cards
+
 Your opponent can **sabotage** your material cards by using an **attack card**. These attacks are:
 - Bankruptcy to sabotage Money;
 - Fire to sabotage Wood;
