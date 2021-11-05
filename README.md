@@ -17,7 +17,16 @@ Introduction
 Text
 
 ## Project
-Text
+**Original Brief for project:**
+
+Create a browser game based on an existing card or dice game. Model and test the game logic and then display it in the browser for a user to interact with.
+
+Write your own MVP with some specific goals to be achieved based on the game you choose to model.
+
+You might use persistence to keep track of the state of the game or track scores/wins. Other extended features will depend on the game you choose.
+
+## Original Game
+The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
 
 ## Original Game
 The Castle Card Game is an original game created by Loic Marles and designed by Anthony Byledbal. It was developed as an educational game for which the players could learn more about medieval castles. It was never released as a physical game because the cost of production was too expensive, but find its way to the digital world.
