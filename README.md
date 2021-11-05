@@ -5,9 +5,9 @@ Introduction
 ![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/castle-logo.png?raw=true)
 
 ## Contents
-* [About us](#About_us)
+* [About us](#about-us)
 * [Project](#Project)
-* [Original game](#Original_game)
+* [Original game](#original-game)
 * [Gameplay](#Gameplay)
 * [Brief](#Brief)
 * [Technologies](#Technologies)
