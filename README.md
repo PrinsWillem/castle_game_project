@@ -88,7 +88,7 @@ Luckily you have **defence cards** that you can use to thwart the enemies attack
 - Thaw to defend against Frost;
 - Apothecary to defend against Plague.
 
-![]()
+![](https://github.com/PrinsWillem/castle_game_project/blob/main/client/public/images/defence-cards.png?raw=true)
 
 If an attack is successful and the player has no defence, the material card that was attacked is discarded along with the attack card used by your opponent.
 
