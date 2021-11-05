@@ -32,7 +32,7 @@ To ensure your victory you must complete **2 objectives**:
 1. Amassing 20 points or more with the tool cards;
 2. Gathering all necessary material cards (Money, Wood, Stone, Mortar, Labour).
 
-Your opponent can also **sabotage** your material cards by using an **attack card**. These attacks are:
+Your opponent can **sabotage** your material cards by using an **attack card**. These attacks are:
 - Bankruptcy to sabotage Money;
 - Fire to sabotage Wood;
 - Shortage to sabotage Stone;
