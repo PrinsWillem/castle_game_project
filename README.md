@@ -18,14 +18,14 @@ Text
 
 ## Project
 > JavaScript Group Project
-Aims
+### Aims
 * To gain experience working in a team with other developers - to understand some of the challenges this creates and ways to overcome them
 * To have the opportunity to use Agile working methods
 * To become more confident using Git/GitHub for a multi person project
 * To consolidate learning from the JavaScript module
 * To investigate some JavaScript libraries you haven't used before (learning how to read docs is an invaluable skill)
 
-Expectations
+### Expectations
 * All members of the group contributing to the planning, development and presentation of the project
 * Members supporting each other to make sure everyone can get the most they can from the week
 * TDD - unit testing of models where appropriate
@@ -94,13 +94,13 @@ You might use persistence to keep track of the state of the game or track scores
 > **Our Brief for project:**
 An educational card game where the players try to build their card game faster than the opponent
 
-MVP
+### MVP
 * Should be able to display the rule
 * Should be able to deal a deck of random cards for each player
 * Should be able to add points for each player
 * Should be able to show a winner at the end of the game
 
-Extensions
+### Extensions
 * Add different type of cards to make the game more complex
 * Track the number of wins by each player
 
