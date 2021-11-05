@@ -114,25 +114,25 @@ The project was created with:
 - HTML/CSS.
 
 ## Setup
-> Clone github repository
+- Clone github repository.
 
-> Open repository in Visual Studio Code
+- Open repository in Visual Studio Code.
 
-navigate into your server folder via vscode terminal and run the command below to fill the database
+- Navigate into your server folder via vscode terminal and run the command below to fill the database:
 ```
 npm run seeds 
 ```
 
-To start the server run the command below in your vscode terminal
+- To start the server run the command below in your vscode terminal:
 ```
 npm run server:dev
 ```
 
-> To check if the server runs the api correctly you can go to http://localhost:5000/api/cards in your browser
+- To check if the server runs the api correctly you can go to http://localhost:5000/api/cards in your browser.
 
-To start the game go to the client folder via vscode terminal and after run the command below to start the game
+- To start the game go to the client folder via vscode terminal and run the command below:
 ```
 npm start
 ```
 
-> The browser should open automatically, if not you can go to http://localhost:3000 in your browser
+- The browser should open automatically. If not you can go to http://localhost:3000 in your browser.
