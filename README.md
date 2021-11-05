@@ -28,10 +28,10 @@ You might use persistence to keep track of the state of the game or track scores
 > **Our Brief for project:**
 
 MVP
-Should be able to display the rule
-Should be able to deal a deck of random cards for each player
-Should be able to add points for each player
-Should be able to show a winner at the end of the game
+* Should be able to display the rule
+* Should be able to deal a deck of random cards for each player
+* Should be able to add points for each player
+* Should be able to show a winner at the end of the game
 
 Extensions
 Add different type of cards to make the game more complex
