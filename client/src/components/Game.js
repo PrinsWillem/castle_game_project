@@ -12,6 +12,7 @@ import './game.css';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
+    // USE STATE
     const [updatedDeck, setUpdatedDeck] = useState([]);
     const [player1Hand, setPlayer1Hand] = useState([]);
     const [player2Hand, setPlayer2Hand] = useState([]);
@@ -32,7 +33,29 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
     const [gameWon, setGameWon] = useState("none");
     
-    const turnPlayer1 = function(){
+    // USE EFFECT
+    useEffect(() => {
+        setUpdatedDeck(deckAfterDealing)
+    }, [deckAfterDealing]);
+
+    useEffect(() => {
+        setPlayer1Hand(firstPlayerHand)
+    }, [firstPlayerHand]);
+
+    useEffect(() => {
+        setPlayer2Hand(firstComputerHand)
+    }, [firstComputerHand]);
+
+    useEffect(() => {
+        assignWinner()
+        //eslint-disable-next-line
+    }, [player1Materials, player2Materials, player1Tools, player2Tools]);
+
+    useEffect(() => {
+        turnPlayers()
+    }, [gameTurnPlayer1, gameTurnPlayer2])
+
+    const turnPlayers = function(){
         if(gameTurnPlayer1 === true) {
             // PLAYER 1
             const onMaterialCardClick = function(card){
@@ -41,6 +64,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     const copiedPlayer1Materials = [...player1Materials, card];
                     setPlayer1Materials(copiedPlayer1Materials);
                     removeCardFromPlayer(card);
+                    setGameTurnPlayer1(false);
+                    setGameTurnPlayer2(true);
                 }
             };
 
@@ -48,6 +73,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 const copiedPlayer1Tools = [...player1Tools, card];
                 setPlayer1Tools(copiedPlayer1Tools);
                 removeCardFromPlayer(card);
+                setGameTurnPlayer1(false);
+                setGameTurnPlayer2(true);
             };
 
             const onAttackCardClick = function(card){
@@ -62,10 +89,14 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         const copiedPlayer2Materials = [...player2Materials];
                         copiedPlayer2Materials.splice(card2remove, 1);
                         setPlayer2Materials(copiedPlayer2Materials);
+                        setGameTurnPlayer1(false);
+                        setGameTurnPlayer2(true);
                     } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
                         const copiedPlayer2Materials = [...player2Materials, card];
                         setPlayer2Materials(copiedPlayer2Materials);
                         removeCardFromPlayer(card);
+                        setGameTurnPlayer1(false);
+                        setGameTurnPlayer2(true);
                     }
                 }
             };
@@ -375,28 +406,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const handleStartGameClick = () => {
         window.location.reload();
     }
-
-    // USE EFFECT
-    useEffect(() => {
-        setUpdatedDeck(deckAfterDealing)
-    }, [deckAfterDealing]);
-
-    useEffect(() => {
-        setPlayer1Hand(firstPlayerHand)
-    }, [firstPlayerHand]);
-
-    useEffect(() => {
-        setPlayer2Hand(firstComputerHand)
-    }, [firstComputerHand]);
-
-    useEffect(() => {
-        assignWinner()
-        //eslint-disable-next-line
-    }, [player1Materials, player2Materials, player1Tools, player2Tools]);
-
-    useEffect(() => {
-        turnPlayer1()
-    }, [gameTurnPlayer1, gameTurnPlayer2])
     
     if(gameWon === "Player1"){
         return(
