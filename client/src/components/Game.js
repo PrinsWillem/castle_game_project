@@ -60,6 +60,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 setPlayer1Materials(copiedPlayer1Materials);
                 removeCardFromPlayer(card);
                 setGameTurnPlayers(false);
+                setGameDeleteOneCardPerTurn(false);
             }
         }
         
@@ -71,6 +72,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setPlayer1Tools(copiedPlayer1Tools);
             removeCardFromPlayer(card);
             setGameTurnPlayers(false);
+            setGameDeleteOneCardPerTurn(false);
         }
     };
 
@@ -88,11 +90,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     copiedPlayer2Materials.splice(card2remove, 1);
                     setPlayer2Materials(copiedPlayer2Materials);
                     setGameTurnPlayers(false);
+                    setGameDeleteOneCardPerTurn(false);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
                     const copiedPlayer2Materials = [...player2Materials, card];
                     setPlayer2Materials(copiedPlayer2Materials);
                     removeCardFromPlayer(card);
                     setGameTurnPlayers(false);
+                    setGameDeleteOneCardPerTurn(false);
                 }
             }
         }
@@ -156,6 +160,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 setPlayer2Materials(copiedPlayer2Materials);
                 removeCardFromPlayer2(card);
                 setGameTurnPlayers(true);
+                setGameDeleteOneCardPerTurn(true);
             }
         }
         
@@ -167,6 +172,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setPlayer2Tools(copiedPlayer2Tools);
             removeCardFromPlayer2(card);
             setGameTurnPlayers(true);
+            setGameDeleteOneCardPerTurn(true);
         }
     };
 
@@ -184,11 +190,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     copiedPlayer1Materials.splice(card2remove, 1);
                     setPlayer1Materials(copiedPlayer1Materials);
                     setGameTurnPlayers(true);
+                    setGameDeleteOneCardPerTurn(true);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
                     const copiedPlayer1Materials = [...player1Materials, card];
                     setPlayer1Materials(copiedPlayer1Materials);
                     removeCardFromPlayer2(card);
                     setGameTurnPlayers(true);
+                    setGameDeleteOneCardPerTurn(true);
                 }
             }
         }
