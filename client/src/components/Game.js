@@ -142,6 +142,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 removeCardFromPlayer(card);
                 addCardToDiscardDeck(card);
                 setGameDeleteOneCardPerTurn(false);
+                setGameTurnPlayers(false);
             }
         }
     }
@@ -236,6 +237,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 removeCardFromPlayer2(card);
                 addCardToDiscardDeck(card);
                 setGameDeleteOneCardPerTurn(true);
+                setGameTurnPlayers(true);
             }
         }
     }
