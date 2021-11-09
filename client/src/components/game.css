@@ -30,6 +30,9 @@
     top: 240px;
     left: 50px;
 }
+.deck-card p{
+    margin-left:100px;
+}
 .deck-card img{
     width: 125px;
     border-radius: 5px;
