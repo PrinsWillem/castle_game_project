@@ -113,6 +113,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 const copiedPlayer1Materials = [...player1Materials];
                 copiedPlayer1Materials.splice(card2remove, 1);
                 setPlayer1Materials(copiedPlayer1Materials);
+                setGameTurnPlayers(true);
+                setGameDeleteOneCardPerTurn(true);
             }
         }
     };
@@ -213,6 +215,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 const copiedPlayer2Materials = [...player2Materials];
                 copiedPlayer2Materials.splice(card2remove, 1);
                 setPlayer2Materials(copiedPlayer2Materials);
+                setGameTurnPlayers(false);
+                setGameDeleteOneCardPerTurn(false);
             }
         }
     };
