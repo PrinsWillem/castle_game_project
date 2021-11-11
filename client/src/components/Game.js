@@ -7,7 +7,6 @@ import Player2Materials from './Player2Materials';
 import Player2Tools from './Player2Tools';
 import Player1Points from './Player1Points';
 import Player2Points from './Player2Points';
-import Deck from './Deck';
 import './game.css';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
@@ -58,8 +57,16 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             if (!materialNames.includes(card.name)){
                 const copiedPlayer1Materials = [...player1Materials, card];
                 setPlayer1Materials(copiedPlayer1Materials);
+
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck(deckCard);
+                removeCardFromDeck(deckCard);
+
                 removeCardFromPlayer(card);
                 setGameTurnPlayers(false);
+                setGameDeleteOneCardPerTurn(false);
             }
         }
         
@@ -69,8 +76,16 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         if(gameTurnPlayers === true){
             const copiedPlayer1Tools = [...player1Tools, card];
             setPlayer1Tools(copiedPlayer1Tools);
+
+            const deckCard = updatedDeck[0];
+            const copiedDeck = [...updatedDeck, deckCard];
+            setUpdatedDeck(copiedDeck);
+            addCardFromDeck(deckCard);
+            removeCardFromDeck(deckCard);
+
             removeCardFromPlayer(card);
             setGameTurnPlayers(false);
+            setGameDeleteOneCardPerTurn(false);
         }
     };
 
@@ -81,6 +96,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             const defenseCard = player2Hand.map(card => card.defence);
             if(player2Materials.length > 0){
                 if(materialNames.includes(card.attacks) && !defenseCard.includes(card.name)){
+
+                    const deckCard = updatedDeck[0];
+                    const copiedDeck = [...updatedDeck, deckCard];
+                    setUpdatedDeck(copiedDeck);
+                    addCardFromDeck(deckCard);
+                    removeCardFromDeck(deckCard);
+
                     removeCardFromPlayer(card);
                     addCardToDiscardDeck(card);
                     const card2remove = materialNames.indexOf(card.attacks);
@@ -88,11 +110,20 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     copiedPlayer2Materials.splice(card2remove, 1);
                     setPlayer2Materials(copiedPlayer2Materials);
                     setGameTurnPlayers(false);
+                    setGameDeleteOneCardPerTurn(false);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
                     const copiedPlayer2Materials = [...player2Materials, card];
                     setPlayer2Materials(copiedPlayer2Materials);
+
+                    const deckCard = updatedDeck[0];
+                    const copiedDeck = [...updatedDeck, deckCard];
+                    setUpdatedDeck(copiedDeck);
+                    addCardFromDeck(deckCard);
+                    removeCardFromDeck(deckCard);
+
                     removeCardFromPlayer(card);
                     setGameTurnPlayers(false);
+                    setGameDeleteOneCardPerTurn(false);
                 }
             }
         }
@@ -103,24 +134,53 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setPlayer1Defense(card);
             const materialNames = player1Materials.map(card => card.name);
             if(materialNames.includes(card.defence)){
+
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck(deckCard);
+                removeCardFromDeck(deckCard);
+
                 removeCardFromPlayer(card);
                 addCardToDiscardDeck(card);
                 const card2remove = materialNames.indexOf(card.defence);
                 const copiedPlayer1Materials = [...player1Materials];
                 copiedPlayer1Materials.splice(card2remove, 1);
                 setPlayer1Materials(copiedPlayer1Materials);
+                setGameTurnPlayers(true);
+                setGameDeleteOneCardPerTurn(true);
             }
         }
     };
 
-    const onDeckCardClick = function(card){
-        if(player1Hand.length < 5){
-            const copiedDeck = [...updatedDeck, card];
-            setUpdatedDeck(copiedDeck);
-            addCardFromDeck(card);
-            removeCardFromDeck(card);
+    const onDiscardCardClick = function(card){
+        if(gameTurnPlayers === true && gameDeleteOneCardPerTurn === true){
+            
+                const copiedPlayer1Hand = [...player1Hand, card];
+                setPlayer1Hand(copiedPlayer1Hand);
+                removeCardFromPlayer(card);
+                addCardToDiscardDeck(card);
+                
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck(deckCard);
+                removeCardFromDeck(deckCard);
+
+                setGameDeleteOneCardPerTurn(false);
+                setGameTurnPlayers(false);
+            
         }
-    };
+    }
+
+    // const onDeckCardClick = function(card){
+    //     if(player1Hand.length < 5){
+    //         const copiedDeck = [...updatedDeck, card];
+    //         setUpdatedDeck(copiedDeck);
+    //         addCardFromDeck(card);
+    //         removeCardFromDeck(card);
+    //     }
+    // };
 
     const removeCardFromPlayer = function(card){
         const index = player1Hand.indexOf(card);
@@ -134,19 +194,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         setPlayer1Hand(player1Hand);
     };
 
-    const onDiscardCardClick = function(card){
-        if(gameTurnPlayers === true){
-            if(gameDeleteOneCardPerTurn === true){
-                const copiedPlayer1Hand = [...player1Hand, card];
-                setPlayer1Hand(copiedPlayer1Hand);
-                removeCardFromPlayer(card);
-                addCardToDiscardDeck(card);
-                setGameDeleteOneCardPerTurn(false);
-                setGameTurnPlayers(false);
-            }
-        }
-    }
-
     // PLAYER 2
     const onMaterialCardClick2 = function(card){
         if(gameTurnPlayers === false){
@@ -154,8 +201,16 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             if (!materialNames.includes(card.name)){
                 const copiedPlayer2Materials = [...player2Materials, card];
                 setPlayer2Materials(copiedPlayer2Materials);
+
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck2(deckCard);
+                removeCardFromDeck(deckCard);
+
                 removeCardFromPlayer2(card);
                 setGameTurnPlayers(true);
+                setGameDeleteOneCardPerTurn(true);
             }
         }
         
@@ -165,8 +220,16 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         if(gameTurnPlayers === false){
             const copiedPlayer2Tools = [...player2Tools, card];
             setPlayer2Tools(copiedPlayer2Tools);
+
+            const deckCard = updatedDeck[0];
+            const copiedDeck = [...updatedDeck, deckCard];
+            setUpdatedDeck(copiedDeck);
+            addCardFromDeck2(deckCard);
+            removeCardFromDeck(deckCard);
+
             removeCardFromPlayer2(card);
             setGameTurnPlayers(true);
+            setGameDeleteOneCardPerTurn(true);
         }
     };
 
@@ -177,6 +240,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             const defenseCard = player1Hand.map(card => card.defence);
             if(player1Materials.length > 0){
                 if(materialNames.includes(card.attacks) && !defenseCard.includes(card.name)){
+
+                    const deckCard = updatedDeck[0];
+                    const copiedDeck = [...updatedDeck, deckCard];
+                    setUpdatedDeck(copiedDeck);
+                    addCardFromDeck2(deckCard);
+                    removeCardFromDeck(deckCard);
+
                     removeCardFromPlayer2(card);
                     addCardToDiscardDeck(card);
                     const card2remove = materialNames.indexOf(card.attacks);
@@ -184,11 +254,20 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     copiedPlayer1Materials.splice(card2remove, 1);
                     setPlayer1Materials(copiedPlayer1Materials);
                     setGameTurnPlayers(true);
+                    setGameDeleteOneCardPerTurn(true);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
                     const copiedPlayer1Materials = [...player1Materials, card];
                     setPlayer1Materials(copiedPlayer1Materials);
+
+                    const deckCard = updatedDeck[0];
+                    const copiedDeck = [...updatedDeck, deckCard];
+                    setUpdatedDeck(copiedDeck);
+                    addCardFromDeck2(deckCard);
+                    removeCardFromDeck(deckCard);
+
                     removeCardFromPlayer2(card);
                     setGameTurnPlayers(true);
+                    setGameDeleteOneCardPerTurn(true);
                 }
             }
         }
@@ -199,23 +278,51 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setPlayer2Defense(card);
             const materialNames = player2Materials.map(card => card.name);
             if(materialNames.includes(card.defence)){
+
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck2(deckCard);
+                removeCardFromDeck(deckCard);
+                
                 removeCardFromPlayer2(card);
                 addCardToDiscardDeck(card);
                 const card2remove = materialNames.indexOf(card.defence);
                 const copiedPlayer2Materials = [...player2Materials];
                 copiedPlayer2Materials.splice(card2remove, 1);
                 setPlayer2Materials(copiedPlayer2Materials);
+                setGameTurnPlayers(false);
+                setGameDeleteOneCardPerTurn(false);
             }
         }
     };
 
-    const onDeckCardClick2 = function(card){
-        if(player2Hand.length < 5){const copiedDeck = [...updatedDeck, card];
-            setUpdatedDeck(copiedDeck);
-            addCardFromDeck2(card);
-            removeCardFromDeck(card);
+    const onDiscardCardClick2 = function(card){
+        if(gameTurnPlayers === false && gameDeleteOneCardPerTurn === false){
+                const copiedPlayer2Hand = [...player2Hand, card];
+                setPlayer2Hand(copiedPlayer2Hand);
+                removeCardFromPlayer2(card);
+                addCardToDiscardDeck(card);
+
+                const deckCard = updatedDeck[0];
+                const copiedDeck = [...updatedDeck, deckCard];
+                setUpdatedDeck(copiedDeck);
+                addCardFromDeck2(deckCard);
+                removeCardFromDeck(deckCard);
+
+                setGameDeleteOneCardPerTurn(true);
+                setGameTurnPlayers(true);
+            
         }
-    };
+    }
+
+    // const onDeckCardClick2 = function(card){
+    //     if(player2Hand.length < 5){const copiedDeck = [...updatedDeck, card];
+    //         setUpdatedDeck(copiedDeck);
+    //         addCardFromDeck2(card);
+    //         removeCardFromDeck(card);
+    //     }
+    // };
 
     const removeCardFromPlayer2 = function(card){
         const index = player2Hand.indexOf(card);
@@ -229,29 +336,15 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         setPlayer2Hand(player2Hand);
     };
 
-    const onDiscardCardClick2 = function(card){
-        if(gameTurnPlayers === false){
-            if(gameDeleteOneCardPerTurn === false){
-                const copiedPlayer2Hand = [...player2Hand, card];
-                setPlayer2Hand(copiedPlayer2Hand);
-                removeCardFromPlayer2(card);
-                addCardToDiscardDeck(card);
-                setGameDeleteOneCardPerTurn(true);
-                setGameTurnPlayers(true);
-            }
-        }
-    }
-
     //PLAYER1 & PLAYER2
     const removeCardFromDeck = function(card){
-        const index = updatedDeck.indexOf(card);
         const copiedUpdatedDeck = [...updatedDeck];
-        copiedUpdatedDeck.splice(index, 1);
+        copiedUpdatedDeck.splice(card, 1);
         setUpdatedDeck(copiedUpdatedDeck);
     };
 
     const addCardToDiscardDeck = function(card){
-        updatedDeck.unshift(card);
+        updatedDeck.push(card);
         setUpdatedDeck(updatedDeck);
     };
 
@@ -295,9 +388,9 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
         return(
             <div id="grid-container">
-                <div className="deck">
+                {/* <div className="deck">
                     <Deck updatedDeck={updatedDeck} onDeckCardClick={onDeckCardClick} onDeckCardClick2={onDeckCardClick2}/>
-                </div>
+                </div> */}
                 <div className="game">
                     <div className="player2">
                         <div className="player2-hand">
