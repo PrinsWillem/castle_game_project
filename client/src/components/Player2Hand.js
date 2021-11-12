@@ -1,21 +1,25 @@
 import React from 'react';
 
-const Player2Hand = ({player2Hand, onMaterialCardClick2, onToolCardClick2, onDiscardCardClick2, onAttackCardClick2, onDefenseCardClick2}) => {
+const Player2Hand = ({player2Hand, gameTurnPlayers, onMaterialCardClick, onToolCardClick, onDiscardCardClick, onAttackCardClick, onDefenseCardClick}) => {
 
     const handleClickPlay2 = function(card){
-        if(card.type === "material"){
-            onMaterialCardClick2(card);
-        } else if(card.type === "tool"){
-            onToolCardClick2(card);
-        } else if(card.type === "attack"){
-            onAttackCardClick2(card);
-        } else if(card.type === "defense"){
-            onDefenseCardClick2(card);
+        if(gameTurnPlayers === false){
+            if(card.type === "material"){
+                onMaterialCardClick(card);
+            } else if(card.type === "tool"){
+                onToolCardClick(card);
+            } else if(card.type === "attack"){
+                onAttackCardClick(card);
+            } else if(card.type === "defense"){
+                onDefenseCardClick(card);
+            }
         }
     };
 
     const handleClickDiscard = function(card){
-        onDiscardCardClick2(card);
+        if(gameTurnPlayers === false){
+            onDiscardCardClick(card);
+        }
     };
 
     const player2Cards = player2Hand.map((card) => {
