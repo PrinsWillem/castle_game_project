@@ -14,7 +14,7 @@ Introduction
 * [Setup](#Setup)
 
 ## About us
-A CodeClan group project developed by original designer of the game Anthony Byledbal along with classmates Willem Prins and Neil Hanlon.
+A CodeClan group project developed by original designer of the game [Anthony Byledbal](https://github.com/ByAnthony) along with classmates [Willem Prins](https://github.com/PrinsWillem) and [Neil Hanlon](https://github.com/NeilH2).
 
 ## Project
 ### JavaScript Group Project

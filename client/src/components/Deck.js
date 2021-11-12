@@ -9,7 +9,7 @@ const Deck = ({updatedDeck, onDeckCardClick, onDeckCardClick2}) => {
     const handleClickPlay2 = function(card){
         onDeckCardClick2(card);
     };
-
+    
     const cardsDeck = updatedDeck.map((card) => {
         return(
             <li className="deck-card" key={card._id}><button className="draw-button" onClick={() => {handleClickPlay2(card)}} type="button">Draw</button>

@@ -17,8 +17,8 @@
 #grid-container{
     display: grid;
     grid-template-areas:
-        'deck game';
-    grid-template-columns: 1fr 9fr;
+        'game';
+    grid-template-columns: 1fr;
     background-color: #282c34;
 }
 .dealing-deck{
