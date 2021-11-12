@@ -100,6 +100,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     const copiedPlayer2Materials = [...player2Materials, card];
                     setPlayer2Materials(copiedPlayer2Materials);
                     onDeckCardClick(updatedDeck[0]);
+                    addCardFromDeck(updatedDeck[0]);
                     removeCardFromPlayer(card);
                     addCardToDiscardDeck(card);
                     removeCardFromDeck(updatedDeck[0]);
