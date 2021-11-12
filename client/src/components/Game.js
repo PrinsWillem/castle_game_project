@@ -93,7 +93,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     const card2remove = materialNames.indexOf(card.attacks);
                     const copiedPlayer2Materials = [...player2Materials];
                     copiedPlayer2Materials.splice(card2remove, 1);
-                    addCardToDiscardDeck(card2remove);
+                    addCardToDiscardDeck(player2Materials[card2remove]);
                     setPlayer2Materials(copiedPlayer2Materials);
                     setGameTurnPlayers(false);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
@@ -203,7 +203,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     const card2remove = materialNames.indexOf(card.attacks);
                     const copiedPlayer1Materials = [...player1Materials];
                     copiedPlayer1Materials.splice(card2remove, 1);
-                    addCardToDiscardDeck(card2remove);
+                    addCardToDiscardDeck(player1Materials[card2remove]);
                     setPlayer1Materials(copiedPlayer1Materials);
                     setGameTurnPlayers(true);
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){
