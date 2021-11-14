@@ -27,6 +27,9 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const [player1Defense, setPlayer1Defense] = useState([]);
     const [player2Defense, setPlayer2Defense] = useState([]);
 
+    const [player1Plunder, setPlayer1Plunder] = useState([]);
+    const [player2Plunder, setPlayer2Plunder] = useState([]);
+
     const [gameTurnPlayers, setGameTurnPlayers] = useState(true);
 
     const [gameWon, setGameWon] = useState("none");
@@ -96,6 +99,34 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             setGameTurnPlayers(true);                                           //
         }                                                                       ////
     };                                                                          //////
+
+    const onPlundercardClick = function(card){
+        if(gameTurnPlayers === true){
+            setPlayer1Plunder(card);
+            const materialNames = player1Materials.map(card => card.name);
+            if(player2Materials.length > 0){
+                if(!materialNames.includes(card.name)){
+                    const copiedPlayer1Materials = [...player1Materials, card];
+                    setPlayer1Materials(copiedPlayer1Materials);
+                    onDeckCardClick(updatedDeck[0]);
+                    addCardFromDeck(updatedDeck[0]);
+                    removeCardFromPlayer(card);
+                }
+            }
+        } else if(gameTurnPlayers === false){
+            setPlayer2Plunder(card);
+            const materialNames = player2Materials.map(card => card.name);
+            if(player1Materials.length > 0){
+                if(!materialNames.includes(card.name)){
+                    const copiedPlayer2Materials = [...player2Materials, card];
+                    setPlayer2Materials(copiedPlayer2Materials);
+                    onDeckCardClick(updatedDeck[0]);
+                    addCardFromDeck(updatedDeck[0]);
+                    removeCardFromPlayer(card);
+                }
+            }
+        }
+    }
 
     const onAttackCardClick = function(card){                                                           ////// [ATTACKCARD CLICK]
         if(gameTurnPlayers === true){                                                                   ////
@@ -191,6 +222,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             }                                                               //
         }                                                                   ////
     };                                                                      //////
+
+
 
     const onDiscardCardClick = function(card){                              ////// [DISCARDCARD CLICK]
         if(gameTurnPlayers === true){                                       ////
@@ -298,7 +331,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 <div className="game">
                     <div className="player2">
                         <div className="player2-hand">
-                            <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
+                            <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
                         </div>
                         <div id="player2-table">
                             <div className="player2-material">
@@ -329,7 +362,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                         </div>
                         <div className="player-hand">
-                            <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
+                            <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
                         </div>
                     </div>
                 </div>

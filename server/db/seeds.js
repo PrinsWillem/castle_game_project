@@ -449,5 +449,45 @@ db.cards.insertMany([
     "type": "tool",
     "value": 10,
     "img": "./images/tools/treadwheel_crane.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
 }
 ]);
