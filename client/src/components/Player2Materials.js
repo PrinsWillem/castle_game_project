@@ -2,13 +2,20 @@ import React from 'react';
 
 const Player2Materials = ({gameTurnPlayers, player2Materials, onCardToPlunderOtherPlayerClick}) => {
 
+     // const handleClickPlay = function(card){
+     //      if(gameTurnPlayers === true){
+     //           if(card.type === "material"){
+     //                onCardToPlunderOtherPlayerClick(card);
+     //           }
+     //      }
+     // };
+
      const handleClickPlay = function(card){
-          if(gameTurnPlayers === false){
-               if(card.type === "material"){
-                    onCardToPlunderOtherPlayerClick(card);
-               }
+          if(card.type === "material"){
+               onCardToPlunderOtherPlayerClick(card);
           }
      };
+
 
      const player2Cards = player2Materials.map((card) => {
           return(
