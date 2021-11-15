@@ -29,6 +29,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
     const [player1Plunder, setPlayer1Plunder] = useState([]);
     const [player2Plunder, setPlayer2Plunder] = useState([]);
+    const [plunderPlayer1, setPlunderplayer1] = useState([]);
+    const [plunderPlayer2, setPlunderplayer2] = useState([]);
 
     const [gameTurnPlayers, setGameTurnPlayers] = useState(true);
 
@@ -110,7 +112,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     setPlayer1Materials(copiedPlayer1Materials);
                     onDeckCardClick(updatedDeck[0]);
                     addCardFromDeck(updatedDeck[0]);
-                    removeCardFromPlayer(card);
+                    removeCardFromPlayer(card); 
                 }
             }
         } else if(gameTurnPlayers === false){
@@ -126,7 +128,29 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 }
             }
         }
-    }
+    };
+
+    const onCardToPlunderOtherPlayerClick = function(card){
+        if(gameTurnPlayers === true){
+            setPlunderplayer1(card);
+            const materialNames = player1Materials.map(card => card.name);
+            if(!materialNames.includes(card.name)){
+                const copiedPlayer1Materials = [...player1Materials, card];
+                setPlayer1Materials(copiedPlayer1Materials);
+                removeCardFromPlayer(card);
+                setGameTurnPlayers(false); 
+            }
+        } else if(gameTurnPlayers === false){
+            setPlunderplayer2(card);
+            const materialNames = player2Materials.map(card => card.name);
+            if(!materialNames.includes(card.name)){
+                const copiedPlayer2Materials = [...player2Materials, card];
+                setPlayer2Materials(copiedPlayer2Materials);
+                removeCardFromPlayer(card);
+                setGameTurnPlayers(true);  
+            }
+        }
+    };
 
     const onAttackCardClick = function(card){                                                           ////// [ATTACKCARD CLICK]
         if(gameTurnPlayers === true){                                                                   ////
@@ -336,7 +360,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         <div id="player2-table">
                             <div className="player2-material">
                                 <div className="player-container">
-                                    <Player2Materials player2Materials={player2Materials}/>
+                                    <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick}/>
                                 </div>
                             </div>
                             <div className="player2-tools">
@@ -351,7 +375,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         <div id="player-table">
                             <div className="player-material">
                                 <div className="player-container">
-                                    <Player1Materials player1Materials={player1Materials}/>
+                                    <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick}/>
                                 </div>
                             </div>
                             <div className="player-tools">
