@@ -4,126 +4,151 @@ db.cards.insertMany([
   {
     "name": "Money",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/money.png"
   },
   {
     "name": "Money",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/money.png"
   },
   {
     "name": "Money",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/money.png"
   },
   {
     "name": "Money",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/money.png"
   },
   {
     "name": "Money",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/money.png"
   },
   {
     "name": "Wood",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/wood.png"
   },
   {
     "name": "Wood",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/wood.png"
   },
   {
     "name": "Wood",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/wood.png"
   },
   {
     "name": "Wood",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/wood.png"
   },
   {
     "name": "Wood",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/wood.png"
   },
   {
     "name": "Stone",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/stone.png"
   },
   {
     "name": "Stone",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/stone.png"
   },
   {
     "name": "Stone",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/stone.png"
   },
   {
     "name": "Stone",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/stone.png"
   },
   {
     "name": "Stone",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/stone.png"
   },
   {
     "name": "Labour",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/labour.png"
   },
   {
     "name": "Labour",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/labour.png"
   },
   {
     "name": "Labour",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/labour.png"
   },
   {
     "name": "Labour",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/labour.png"
   },
   {
     "name": "Labour",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/labour.png"
   },
   {
     "name": "Mortar",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/mortar.png"
   },
   {
     "name": "Mortar",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/mortar.png"
   },
   {
     "name": "Mortar",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/mortar.png"
   },
   {
     "name": "Mortar",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/mortar.png"
   },
   {
     "name": "Mortar",
     "type": "material",
+    "plunder": "Plunder",
     "img": "./images/material/mortar.png"
   },
   {
@@ -449,31 +474,6 @@ db.cards.insertMany([
     "type": "tool",
     "value": 10,
     "img": "./images/tools/treadwheel_crane.png"
-},
-{
-  "name": "Plunder",
-  "type": "plunder",
-  "img": "./images/special_cards/plunder.png"
-},
-{
-  "name": "Plunder",
-  "type": "plunder",
-  "img": "./images/special_cards/plunder.png"
-},
-{
-  "name": "Plunder",
-  "type": "plunder",
-  "img": "./images/special_cards/plunder.png"
-},
-{
-  "name": "Plunder",
-  "type": "plunder",
-  "img": "./images/special_cards/plunder.png"
-},
-{
-  "name": "Plunder",
-  "type": "plunder",
-  "img": "./images/special_cards/plunder.png"
 },
 {
   "name": "Plunder",
