@@ -391,7 +391,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         <div id="player2-table">
                             <div className="player2-material">
                                 <div className="player-container">
-                                    <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick}/>
+                                    <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                 </div>
                             </div>
                             <div className="player2-tools">
@@ -406,7 +406,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         <div id="player-table">
                             <div className="player-material">
                                 <div className="player-container">
-                                    <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick}/>
+                                    <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                 </div>
                             </div>
                             <div className="player-tools">
