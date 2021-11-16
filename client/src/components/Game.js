@@ -80,7 +80,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     };                                                                                                              //////
 
     const onToolCardClick = function(card){                                                                         ////// [TOOLCARD CLICK]
-        if((gameTurnPlayers === true) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === false)){                                          ////
+        if((gameTurnPlayers === true) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === false)){       ////
             const copiedPlayer1Tools = [...player1Tools, card];                                                     //
             setPlayer1Tools(copiedPlayer1Tools);                                                                    //
             onDeckCardClick(updatedDeck[0]);                                                                        // 
@@ -256,6 +256,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 copiedPlayer1Materials.splice(card2remove, 1);                                                          //
                 setPlayer1Materials(copiedPlayer1Materials);                                                            //
                 setGameTurnPlayers(true);                                                                               //
+                setGamePlayDefenceCard(false);                                                                          //
             }                                                                                                           //
         }                                                                                                               //
         else if((gameTurnPlayers === false) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === true)){      ////
@@ -272,6 +273,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 copiedPlayer2Materials.splice(card2remove, 1);                                                          //
                 setPlayer2Materials(copiedPlayer2Materials);                                                            //
                 setGameTurnPlayers(false);                                                                              //
+                setGamePlayDefenceCard(false);                                                                          //              
             }                                                                                                           //
         }                                                                                                               ////
     };                                                                                                                  //////
