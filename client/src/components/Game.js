@@ -130,8 +130,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 copiedPlayer1Materials.splice(card2remove, 1);                  //
                 onDeckCardClick(updatedDeck[0]);                                //
                 addCardFromDeck(updatedDeck[0]);                                //
-                addCardToDiscardDeck(player1Materials[card2remove]);            //  PLAYER 1
-                setGameTurnPlayers(false);                                      //
+                addCardToDiscardDeck(player1Materials[card2remove]);            //
+                setGameTurnPlayers(false);                                      //  PLAYER 1
             } else if(materialNames.includes(card.name)){                       //
                 const copiedPlayer1Hand = [...player1Hand, card];               //
                 setPlayer1Hand(copiedPlayer1Hand);                              //
@@ -139,6 +139,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 const copiedPlayer1Materials = [...player1Materials];           //
                 const card2remove = materialNames.indexOf(card.plunder);        //
                 copiedPlayer1Materials.splice(card2remove, 1);                  //
+                setPlayer1Materials(copiedPlayer1Materials);                    //
                 addCardToDiscardDeck(player1Materials[card2remove]);            //
                 setGameTurnPlayers(false);                                      //
             }                                                                   //
@@ -152,8 +153,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 copiedPlayer2Materials.splice(card2remove, 1);                  //
                 onDeckCardClick(updatedDeck[0]);                                //
                 addCardFromDeck(updatedDeck[0]);                                //
-                addCardToDiscardDeck(player2Materials[card2remove]);            //  PLAYER 2
-                setGameTurnPlayers(true);                                       //
+                addCardToDiscardDeck(player2Materials[card2remove]);            //
+                setGameTurnPlayers(true);                                       //  PLAYER 2
             } else if(materialNames.includes(card.name)){                       //
                 const copiedPlayer2Hand = [...player2Hand, card];               //
                 setPlayer2Hand(copiedPlayer2Hand);                              //
@@ -161,6 +162,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 const copiedPlayer2Materials = [...player2Materials];           //
                 const card2remove = materialNames.indexOf(card.plunder);        //
                 copiedPlayer2Materials.splice(card2remove, 1);                  //
+                setPlayer2Materials(copiedPlayer2Materials);                    //
                 addCardToDiscardDeck(player2Materials[card2remove]);            //
                 setGameTurnPlayers(true);                                       //
             }                                                                   //
