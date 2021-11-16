@@ -12,29 +12,30 @@ import './game.css';
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
     // USE STATE
-    const [updatedDeck, setUpdatedDeck] = useState([]);
-    const [player1Hand, setPlayer1Hand] = useState([]);
-    const [player2Hand, setPlayer2Hand] = useState([]);
+    const [updatedDeck, setUpdatedDeck] = useState([]); // 1 State [updatedDeck]
+    const [player1Hand, setPlayer1Hand] = useState([]); // 2 State [player1Hand]
+    const [player2Hand, setPlayer2Hand] = useState([]); // 3 State [player2Hand]
 
-    const [player1Materials, setPlayer1Materials] = useState([]);
-    const [player2Materials, setPlayer2Materials] = useState([]);
+    const [player1Materials, setPlayer1Materials] = useState([]); // 4 State [player1Materials]
+    const [player2Materials, setPlayer2Materials] = useState([]); // 5 State [player2Materials]
 
-    const [player1Tools, setPlayer1Tools] = useState([]);
-    const [player2Tools, setPlayer2Tools] = useState([]);
+    const [player1Tools, setPlayer1Tools] = useState([]);   // 6 State [player1Tools]
+    const [player2Tools, setPlayer2Tools] = useState([]);   // 7 State [player2Tools]
 
-    const [player1Attack, setPlayer1Attack] = useState([]);
-    const [player2Attack, setPlayer2Attack] = useState([]);
-    const [player1Defense, setPlayer1Defense] = useState([]);
-    const [player2Defense, setPlayer2Defense] = useState([]);
-    const [gamePlayDefenceCard, setGamePlayDefenceCard] = useState(false);
+    const [player1Attack, setPlayer1Attack] = useState([]); // 8 State [player1Attack]
+    const [player2Attack, setPlayer2Attack] = useState([]); // 9 State [player2Attack]
+    const [player1Defense, setPlayer1Defense] = useState([]); // 10 State [player1Defense]
+    const [player2Defense, setPlayer2Defense] = useState([]); // 11 State [player2Defense]
+    const [gamePlayDefenceCard, setGamePlayDefenceCard] = useState(false); // 12 State [gamePlayDefenceCard]
 
-    const [gameTurnPlayers, setGameTurnPlayers] = useState(true);
-    const [gamePlayPlunderCard, setGamePlayPlunderCard] = useState(false)
+    const [gamePlayPlunderCard, setGamePlayPlunderCard] = useState(false) // 13 State [gamePlayPlunderCard]
 
-    const [gameWon, setGameWon] = useState("none");
+    const [gameTurnPlayers, setGameTurnPlayers] = useState(true); // 14 State [gameTurnPlayers]
+    
+    const [gameWon, setGameWon] = useState("none"); // 15 State [gameWon]
     
     // USE EFFECT
-    useEffect(() => {
+    useEffect(() => { // 16 Effect
         setUpdatedDeck(deckAfterDealing)
     }, [deckAfterDealing]);
 
