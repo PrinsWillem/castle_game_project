@@ -1,0 +1,21 @@
+.player-tools{
+    margin: 30px;
+    grid-area: player-tools;
+    border-radius: 5px;
+}
+.player-tools-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.player-card-table{
+    margin-left:-58px;
+}
+.player-card-table img{
+    width: 90px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}

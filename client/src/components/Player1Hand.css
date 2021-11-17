@@ -1,0 +1,21 @@
+.player-hand{
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.player-card{
+    padding: 10px;
+}
+.player-card img{
+    width: 115px;
+    border-radius: 5px;
+    transition: 0.5s linear;
+}
+.player-card img:hover{
+    cursor: pointer;
+    transform: translateY(-15px);
+}

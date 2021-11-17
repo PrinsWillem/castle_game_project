@@ -1,0 +1,14 @@
+.player2-materials{
+    margin: 30px;
+    grid-area: computer-material;
+    border-radius: 5px;
+}
+.player2-materials-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}

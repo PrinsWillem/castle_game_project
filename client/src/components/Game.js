@@ -7,7 +7,14 @@ import Player2Materials from './Player2Materials';
 import Player2Tools from './Player2Tools';
 import Player1Points from './Player1Points';
 import Player2Points from './Player2Points';
-import './game.css';
+import './Game.css';
+import './Player1Hand.css';
+import './Player1Materials.css';
+import './Player1Tools.css';
+import './Player2Hand.css';
+import './Player2Materials.css';
+import './Player2Tools.css';
+import './PlayerPoints.css';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
@@ -399,18 +406,18 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         return(
             <div id="grid-container">
                 <div className="game">
-                    <div className="player2">
+                    <div className="player">
                         <div className="player2-hand">
                             <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
                         </div>
                         <div id="player2-table">
-                            <div className="player2-material">
-                                <div className="player-container">
+                            <div className="player2-materials">
+                                <div className="player2-materials-container">
                                     <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                 </div>
                             </div>
                             <div className="player2-tools">
-                                <div className="player-container">
+                                <div className="player2-tools-container">
                                     <Player2Tools player2Tools={player2Tools}/>
                                         <Player2Points player2Tools={player2Tools}/>
                                 </div>
@@ -419,13 +426,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     </div>
                     <div className="player">
                         <div id="player-table">
-                            <div className="player-material">
-                                <div className="player-container">
+                            <div className="player-materials">
+                                <div className="player-materials-container">
                                     <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                 </div>
                             </div>
                             <div className="player-tools">
-                                <div className="player-container">
+                                <div className="player-tools-container">
                                     <Player1Tools player1Tools={player1Tools}/>
                                         <Player1Points player1Tools={player1Tools}/>
                                 </div>

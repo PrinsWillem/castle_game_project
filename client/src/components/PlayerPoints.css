@@ -1,0 +1,11 @@
+.player-points{
+    position: relative;
+    padding: 13px 15px 15px 16px;
+    background: #282c34;
+    border-radius: 5px;
+    font-family:Lato;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(168,134,91);
+    margin-left: -23px;
+}
