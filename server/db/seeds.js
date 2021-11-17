@@ -489,5 +489,40 @@ db.cards.insertMany([
   "name": "Plunder",
   "type": "plunder",
   "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "img": "./images/special_cards/plan.png"
 }
 ]);

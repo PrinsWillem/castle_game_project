@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Player1Hand = ({player1Hand, gameTurnPlayers, onMaterialCardClick, onToolCardClick, onDiscardCardClick, onAttackCardClick, onDefenseCardClick, onPlundercardClick}) => {
+const Player1Hand = ({player1Hand, gameTurnPlayers, onMaterialCardClick, onToolCardClick, onPlancardClick, onDiscardCardClick, onAttackCardClick, onDefenseCardClick, onPlundercardClick}) => {
 
     const handleClickPlay = function(card){
         if(gameTurnPlayers === true){
@@ -14,6 +14,8 @@ const Player1Hand = ({player1Hand, gameTurnPlayers, onMaterialCardClick, onToolC
                 onDefenseCardClick(card);
             } else if(card.type === "plunder"){
                 onPlundercardClick(card);
+            } else if(card.type === "plan"){
+                onPlancardClick(card);
             }
         }
     };

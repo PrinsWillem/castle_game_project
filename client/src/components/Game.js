@@ -185,6 +185,28 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         }                                                                                                               ////
     };                                                                                                                  //////
 
+    const onPlancardClick = function(card){
+        if((gameTurnPlayers === true) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === false)){
+            if(player1Tools.length > 0){
+                const toolNames = player1Tools.map(card => card.name);
+                if(!toolNames.includes(card.name)){
+                    const copiedPlayer1Tools = [...player1Tools, card];
+                    setPlayer1Tools(copiedPlayer1Tools);
+                    setGameTurnPlayers(false);  
+                } 
+            } 
+        } else if((gameTurnPlayers === false) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === false)){
+            if(player2Tools.length > 0){
+                const toolNames = player2Tools.map(card => card.name);  
+                if(!toolNames.includes(card.name)){
+                    const copiedPlayer2Tools = [...player2Tools, card];
+                    setPlayer2Tools(copiedPlayer2Tools);
+                    setGameTurnPlayers(true);
+                }   
+            }
+        }
+      }      
+
     const onAttackCardClick = function(card){                                                                           ////// [ATTACKCARD CLICK]
         if((gameTurnPlayers === true) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === false)){           ////
             setPlayer1Attack(card);                                                                                     //
@@ -408,7 +430,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 <div className="game">
                     <div className="player">
                         <div className="player2-hand">
-                            <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
+                            <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
                         </div>
                         <div id="player2-table">
                             <div className="player2-materials">
@@ -439,7 +461,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                         </div>
                         <div className="player-hand">
-                            <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
+                            <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
                         </div>
                     </div>
                 </div>
