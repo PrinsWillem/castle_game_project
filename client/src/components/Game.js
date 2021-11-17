@@ -196,7 +196,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     addCardToDiscardDeck(player2Materials[card2remove]);                                                // PLAYER 1
                     setPlayer2Materials(copiedPlayer2Materials);                                                        // 
                     setGameTurnPlayers(false);                                                                          //
-                    setGamePlayDefenceCard(true);                                                                       //
+                    setGamePlayDefenceCard(false);                                                                       //
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){                     //
                     const copiedPlayer2Materials = [...player2Materials, card];                                         //
                     setPlayer2Materials(copiedPlayer2Materials);                                                        //
@@ -226,7 +226,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                     addCardToDiscardDeck(player1Materials[card2remove]);                                                // PLAYER 2
                     setPlayer1Materials(copiedPlayer1Materials);                                                        //
                     setGameTurnPlayers(true);                                                                           //
-                    setGamePlayDefenceCard(true);                                                                       //
+                    setGamePlayDefenceCard(false);                                                                       //
                 } else if(materialNames.includes(card.attacks) && defenseCard.includes(card.name)){                     //
                     const copiedPlayer1Materials = [...player1Materials, card];                                         //
                     setPlayer1Materials(copiedPlayer1Materials);                                                        //
@@ -338,10 +338,10 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     };                                                                              //////
 
     const addCardFromDeck = function(card){                                         ////// [CARD DEALER]
-        if((gameTurnPlayers === true) && (gamePlayPlunderCard === false)){           ////
+        if(gameTurnPlayers === true){                                               ////
             player1Hand.push(card);                                                 // PLAYER 1
             setPlayer1Hand(player1Hand);                                            //
-        }else if((gameTurnPlayers === false) && (gamePlayPlunderCard === false)){    ////
+        }else if(gameTurnPlayers === false){                                        ////
             player2Hand.push(card);                                                 // PLAYER 2
             setPlayer2Hand(player2Hand);                                            //
         }                                                                           ////
