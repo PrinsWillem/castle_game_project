@@ -61,24 +61,29 @@
     width: 90px;
     border-radius: 5px;
     transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .Fire img{
     width: 90px;
     border-radius: 5px;
     transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .Shortage img{
     width: 90px;
     border-radius: 5px;
     transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .Frost img{
     width: 90px;
     border-radius: 5px;
     transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .Plague img{
     width: 90px;
     border-radius: 5px;
     transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }

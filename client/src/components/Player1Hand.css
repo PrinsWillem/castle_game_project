@@ -14,6 +14,7 @@
     width: 115px;
     border-radius: 5px;
     transition: 0.5s linear;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .player-card img:hover{
     cursor: pointer;
