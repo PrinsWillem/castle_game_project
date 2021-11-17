@@ -1,5 +1,6 @@
 .player-tools{
-    margin: 30px;
+    height: 90px;
+    margin: 40px 30px 30px 30px;
     grid-area: player-tools;
     border-radius: 5px;
 }
@@ -18,4 +19,7 @@
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.player-card-table img:hover{
+    cursor: pointer;
 }

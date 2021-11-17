@@ -1,5 +1,6 @@
 .player-materials{
-    margin: 30px;
+    height: 90px;
+    margin: 40px 30px 30px 30px;
     grid-area: player-material;
     border-radius: 5px;
 }
@@ -17,25 +18,40 @@
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
+.Money img:hover{
+    cursor: pointer;
+}
 .Wood img{
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Wood img:hover{
+    cursor: pointer;
 }
 .Stone img{
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
+.Stone img:hover{
+    cursor: pointer;
+}
 .Mortar img{
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
+.Mortar img:hover{
+    cursor: pointer;
+}
 .Labour img{
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Labour img:hover{
+    cursor: pointer;
 }
 .Plunder img{
     width: 90px;
