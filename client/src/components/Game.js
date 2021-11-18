@@ -499,6 +499,9 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                         </div>
                     </div>
+                    <div className="battlefield">
+                        
+                    </div>
                     <div className="player">
                         <div id="player-table">
                             <div className="player-materials">

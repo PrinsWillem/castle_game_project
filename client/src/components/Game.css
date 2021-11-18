@@ -37,12 +37,6 @@
         'player-materials battlefield player-tools';
     grid-template-columns: 3fr 3fr 3fr;
 }
-/* #player2-table{
-    display: grid;
-    grid-template-areas:
-        'computer-material computer-tools';
-    grid-template-columns: 50%;
-} */
 .discard-button{
     position: absolute;
     margin-top: -17px;
