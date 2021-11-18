@@ -519,41 +519,5 @@ db.cards.insertMany([
   "type": "plan",
   "value": 0,
   "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
-},
-{
-  "name": "Plan",
-  "type": "plan",
-  "value": 0,
-  "img": "./images/special_cards/plan.png"
 }
 ]);
