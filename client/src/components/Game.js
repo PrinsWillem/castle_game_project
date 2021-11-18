@@ -133,55 +133,87 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
     const onCardToPlunderOtherPlayerClick = function(card){                                                             ////// [CARD TO PLUNDER CLICK]
         if((gameTurnPlayers === true) && (gamePlayPlunderCard === true) && (gamePlayDefenceCard === false)){            ////
-            const materialNames = player1Materials.map(card => card.name);                                              //
-            if(!materialNames.includes(card.name)){                                                                     //
-                const copiedPlayer1Materials = [...player1Materials, card];                                             //
-                setPlayer1Materials(copiedPlayer1Materials);                                                            //
-                removeCardFromPlayerMaterials(card);                                                                    //
+            const materialNames = player1Materials.map(card => card.name);                                             //
+            const toolNames = player1Tools.map(card => card.name);
+            if(card.type === "material"){
+                if(!materialNames.includes(card.name)){                                                                     //
+                    const copiedPlayer1Materials = [...player1Materials, card];                                             //
+                    setPlayer1Materials(copiedPlayer1Materials);                                                            //
+                    removeCardFromPlayerMaterials(card);                                                                    //
+                    const card2remove = materialNames.indexOf(card.plunder);                                                //
+                    copiedPlayer1Materials.splice(card2remove, 1);                                                          //
+                    onDeckCardClick(updatedDeck[0]);                                                                        //
+                    addCardFromDeck(updatedDeck[0]);                                                                        //
+                    addCardToDiscardDeck(player1Materials[card2remove]);                                                    //
+                    setGameTurnPlayers(false);                                                                              //  PLAYER 1
+                    setGamePlayPlunderCard(false);                                                                          //
+                } else if(materialNames.includes(card.name)){                                                               //
+                    const copiedPlayer1Hand = [...player1Hand, card];                                                       //
+                    setPlayer1Hand(copiedPlayer1Hand);                                                                      //
+                    removeCardFromPlayerMaterials(card);                                                                    //
+                    const copiedPlayer1Materials = [...player1Materials];                                                   //
+                    const card2remove = materialNames.indexOf(card.plunder);                                                //
+                    copiedPlayer1Materials.splice(card2remove, 1);                                                          //
+                    setPlayer1Materials(copiedPlayer1Materials);                                                            //
+                    addCardToDiscardDeck(player1Materials[card2remove]);                                                    //
+                    setGameTurnPlayers(false);                                                                              //
+                    setGamePlayPlunderCard(false);                                                                          //
+                }  
+            } else if(card.type === "tool" || card.type === "plan"){
+                const copiedPlayer1Tools = [...player1Tools, card];
+                setPlayer1Tools(copiedPlayer1Tools);
+                removeCardFromPlayerTools(card);
+                const copiedPlayer1Materials = [...player1Materials];
                 const card2remove = materialNames.indexOf(card.plunder);                                                //
-                copiedPlayer1Materials.splice(card2remove, 1);                                                          //
+                copiedPlayer1Materials.splice(card2remove, 1);
+                setPlayer1Materials(copiedPlayer1Materials);                                                          //
                 onDeckCardClick(updatedDeck[0]);                                                                        //
                 addCardFromDeck(updatedDeck[0]);                                                                        //
                 addCardToDiscardDeck(player1Materials[card2remove]);                                                    //
                 setGameTurnPlayers(false);                                                                              //  PLAYER 1
-                setGamePlayPlunderCard(false);                                                                          //
-            } else if(materialNames.includes(card.name)){                                                               //
-                const copiedPlayer1Hand = [...player1Hand, card];                                                       //
-                setPlayer1Hand(copiedPlayer1Hand);                                                                      //
-                removeCardFromPlayerMaterials(card);                                                                    //
-                const copiedPlayer1Materials = [...player1Materials];                                                   //
-                const card2remove = materialNames.indexOf(card.plunder);                                                //
-                copiedPlayer1Materials.splice(card2remove, 1);                                                          //
-                setPlayer1Materials(copiedPlayer1Materials);                                                            //
-                addCardToDiscardDeck(player1Materials[card2remove]);                                                    //
-                setGameTurnPlayers(false);                                                                              //
-                setGamePlayPlunderCard(false);                                                                          //
-            }                                                                                                           //
+                setGamePlayPlunderCard(false);                
+            }                                                                                                        //
         } else if((gameTurnPlayers === false) && (gamePlayPlunderCard === true) && (gamePlayDefenceCard === false)){    ////
             const materialNames = player2Materials.map(card => card.name);                                              //
-            if(!materialNames.includes(card.name)){                                                                     //
-                const copiedPlayer2Materials = [...player2Materials, card];                                             //
-                setPlayer2Materials(copiedPlayer2Materials);                                                            //
-                removeCardFromPlayerMaterials(card);                                                                    //
+            const toolNames = player2Tools.map(card => card.name);
+            if(card.type === "material"){
+                if(!materialNames.includes(card.name)){                                                                     //
+                    const copiedPlayer2Materials = [...player2Materials, card];                                             //
+                    setPlayer2Materials(copiedPlayer2Materials);                                                            //
+                    removeCardFromPlayerMaterials(card);                                                                    //
+                    const card2remove = materialNames.indexOf(card.plunder);                                                //
+                    copiedPlayer2Materials.splice(card2remove, 1);                                                          //
+                    onDeckCardClick(updatedDeck[0]);                                                                        //
+                    addCardFromDeck(updatedDeck[0]);                                                                        //
+                    addCardToDiscardDeck(player2Materials[card2remove]);                                                    //
+                    setGameTurnPlayers(true);                                                                               //  PLAYER 2
+                    setGamePlayPlunderCard(false);                                                                          //
+                } else if(materialNames.includes(card.name)){                                                               //
+                    const copiedPlayer2Hand = [...player2Hand, card];                                                       //
+                    setPlayer2Hand(copiedPlayer2Hand);                                                                      //
+                    removeCardFromPlayerMaterials(card);                                                                    //
+                    const copiedPlayer2Materials = [...player2Materials];                                                   //
+                    const card2remove = materialNames.indexOf(card.plunder);                                                //
+                    copiedPlayer2Materials.splice(card2remove, 1);                                                          //
+                    setPlayer2Materials(copiedPlayer2Materials);                                                            //
+                    addCardToDiscardDeck(player2Materials[card2remove]);                                                    //
+                    setGameTurnPlayers(true);                                                                               //
+                    setGamePlayPlunderCard(false);                                                                          //
+                }     
+            } else if(card.type === "tool" || card.type === "plan"){
+                const copiedPlayer2Tools = [...player2Tools, card];
+                setPlayer2Tools(copiedPlayer2Tools);
+                removeCardFromPlayerTools(card);
+                const copiedPlayer2Materials = [...player2Materials];
                 const card2remove = materialNames.indexOf(card.plunder);                                                //
-                copiedPlayer2Materials.splice(card2remove, 1);                                                          //
+                copiedPlayer2Materials.splice(card2remove, 1);
+                setPlayer2Materials(copiedPlayer2Materials);                                                          //
                 onDeckCardClick(updatedDeck[0]);                                                                        //
                 addCardFromDeck(updatedDeck[0]);                                                                        //
                 addCardToDiscardDeck(player2Materials[card2remove]);                                                    //
-                setGameTurnPlayers(true);                                                                               //  PLAYER 2
-                setGamePlayPlunderCard(false);                                                                          //
-            } else if(materialNames.includes(card.name)){                                                               //
-                const copiedPlayer2Hand = [...player2Hand, card];                                                       //
-                setPlayer2Hand(copiedPlayer2Hand);                                                                      //
-                removeCardFromPlayerMaterials(card);                                                                    //
-                const copiedPlayer2Materials = [...player2Materials];                                                   //
-                const card2remove = materialNames.indexOf(card.plunder);                                                //
-                copiedPlayer2Materials.splice(card2remove, 1);                                                          //
-                setPlayer2Materials(copiedPlayer2Materials);                                                            //
-                addCardToDiscardDeck(player2Materials[card2remove]);                                                    //
-                setGameTurnPlayers(true);                                                                               //
-                setGamePlayPlunderCard(false);                                                                          //
-            }                                                                                                           //
+                setGameTurnPlayers(true);                                                                              //  PLAYER 1
+                setGamePlayPlunderCard(false);                
+            }                                                                                                                      //
         }                                                                                                               ////
     };                                                                                                                  //////
 
@@ -366,6 +398,21 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         }                                                                           ////
     };                                                                              //////
 
+    const removeCardFromPlayerTools = function(card){                           ////// [REMOVECARD FROM MATERIAL]
+        if(gameTurnPlayers === false){                                              ////
+            const index = player1Tools.indexOf(card);                           //
+            const copiedPlayer1Tools = [...player1Tools];                   // PLAYER 1
+            copiedPlayer1Tools.splice(index, 1);                                //
+            setPlayer1Tools(copiedPlayer1Tools);                            //
+        } else if(gameTurnPlayers === true){                                        ////
+            const index = player2Tools.indexOf(card);                           //
+            const copiedPlayer2Tools = [...player2Tools];                   // PLAYER 2
+            copiedPlayer2Tools.splice(index, 1);                                //
+            setPlayer2Tools(copiedPlayer2Tools);                            //
+        }                                                                           ////
+    };                                                                              //////
+
+
     const addCardFromDeck = function(card){                                         ////// [CARD DEALER]
         if(gameTurnPlayers === true){                                               ////
             player1Hand.push(card);                                                 // PLAYER 1
@@ -440,7 +487,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                             <div className="player2-tools">
                                 <div className="player2-tools-container">
-                                    <Player2Tools player2Tools={player2Tools}/>
+                                    <Player2Tools player2Tools={player2Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                         <Player2Points player2Tools={player2Tools}/>
                                 </div>
                             </div>
@@ -455,7 +502,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                             <div className="player-tools">
                                 <div className="player-tools-container">
-                                    <Player1Tools player1Tools={player1Tools}/>
+                                    <Player1Tools player1Tools={player1Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                                         <Player1Points player1Tools={player1Tools}/>
                                 </div>
                             </div>
