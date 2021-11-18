@@ -1,7 +1,7 @@
 .player2-materials{
     height: 90px;
     margin: 30px 30px 40px 30px;
-    grid-area: computer-material;
+    grid-area: player2-materials;
     border-radius: 5px;
 }
 .player2-materials-container{

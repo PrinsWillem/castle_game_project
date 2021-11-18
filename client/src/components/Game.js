@@ -222,6 +222,10 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 if(!toolNames.includes(card.name)){
                     const copiedPlayer1Tools = [...player1Tools, card];
                     setPlayer1Tools(copiedPlayer1Tools);
+                    onDeckCardClick(updatedDeck[0]);                                                                    // PLAYER 1
+                    addCardFromDeck(updatedDeck[0]);                                                                    //
+                    removeCardFromPlayer(card);                                                                         //
+                    removeCardFromDeck(updatedDeck[0]);
                     setGameTurnPlayers(false);  
                 } 
             } 
@@ -231,6 +235,10 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                 if(!toolNames.includes(card.name)){
                     const copiedPlayer2Tools = [...player2Tools, card];
                     setPlayer2Tools(copiedPlayer2Tools);
+                    onDeckCardClick(updatedDeck[0]);                                                                    // PLAYER 1
+                    addCardFromDeck(updatedDeck[0]);                                                                    //
+                    removeCardFromPlayer(card);                                                                         //
+                    removeCardFromDeck(updatedDeck[0]);
                     setGameTurnPlayers(true);
                 }   
             }
@@ -477,7 +485,7 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         <div className="player2-hand">
                             <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
                         </div>
-                        <div id="player2-table">
+                        <div id="player-table">
                             <div className="player2-materials">
                                 <div className="player2-materials-container">
                                     <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>

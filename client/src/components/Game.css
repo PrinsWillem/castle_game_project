@@ -33,15 +33,16 @@
     margin-bottom: 20px;
     display: grid;
     grid-template-areas:
-        'player-material player-tools';
-    grid-template-columns: 50%;
+        'player2-materials battlefield player2-tools'
+        'player-materials battlefield player-tools';
+    grid-template-columns: 3fr 3fr 3fr;
 }
-#player2-table{
+/* #player2-table{
     display: grid;
     grid-template-areas:
         'computer-material computer-tools';
     grid-template-columns: 50%;
-}
+} */
 .discard-button{
     position: absolute;
     margin-top: -17px;

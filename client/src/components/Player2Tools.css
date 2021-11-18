@@ -1,7 +1,7 @@
 .player2-tools{
     height: 90px;
     margin: 30px 30px 40px 30px;
-    grid-area: computer-tools;
+    grid-area: player2-tools;
 }
 .player2-tools-container{
     display: flex;
