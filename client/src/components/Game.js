@@ -15,6 +15,7 @@ import './Player2Hand.css';
 import './Player2Materials.css';
 import './Player2Tools.css';
 import './PlayerPoints.css';
+import Battlefield from './Battlefield';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
@@ -35,11 +36,13 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const [player2Defense, setPlayer2Defense] = useState([]); // 11 State [player2Defense]
     const [gamePlayDefenceCard, setGamePlayDefenceCard] = useState(false); // 12 State [gamePlayDefenceCard]
 
-    const [gamePlayPlunderCard, setGamePlayPlunderCard] = useState(false) // 13 State [gamePlayPlunderCard]
+    const [gamePlayPlunderCard, setGamePlayPlunderCard] = useState(false); // 13 State [gamePlayPlunderCard]
 
-    const [gameTurnPlayers, setGameTurnPlayers] = useState(true); // 14 State [gameTurnPlayers]
+    const [gameBattlefield, setGameBattlefield] = useState([]); // 14 State [gameBattlefield]
+
+    const [gameTurnPlayers, setGameTurnPlayers] = useState(true); // 15 State [gameTurnPlayers]
     
-    const [gameWon, setGameWon] = useState("none"); // 15 State [gameWon]
+    const [gameWon, setGameWon] = useState("none"); // 16 State [gameWon]
     
     // USE EFFECT
     useEffect(() => { // 16 Effect
@@ -499,8 +502,8 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="battlefield">
-                        
+                    <div>
+                        <Battlefield gameBattlefield={gameBattlefield}/>
                     </div>
                     <div className="player">
                         <div id="player-table">
