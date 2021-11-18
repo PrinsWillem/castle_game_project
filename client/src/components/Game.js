@@ -134,7 +134,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     const onCardToPlunderOtherPlayerClick = function(card){                                                             ////// [CARD TO PLUNDER CLICK]
         if((gameTurnPlayers === true) && (gamePlayPlunderCard === true) && (gamePlayDefenceCard === false)){            ////
             const materialNames = player1Materials.map(card => card.name);                                             //
-            const toolNames = player1Tools.map(card => card.name);
             if(card.type === "material"){
                 if(!materialNames.includes(card.name)){                                                                     //
                     const copiedPlayer1Materials = [...player1Materials, card];                                             //
@@ -175,7 +174,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
             }                                                                                                        //
         } else if((gameTurnPlayers === false) && (gamePlayPlunderCard === true) && (gamePlayDefenceCard === false)){    ////
             const materialNames = player2Materials.map(card => card.name);                                              //
-            const toolNames = player2Tools.map(card => card.name);
             if(card.type === "material"){
                 if(!materialNames.includes(card.name)){                                                                     //
                     const copiedPlayer2Materials = [...player2Materials, card];                                             //

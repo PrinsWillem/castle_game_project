@@ -334,144 +334,168 @@ db.cards.insertMany([
   {
     "name": "Carpenter",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/carpenter.png"
 },
 {
     "name": "Carpenter",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/carpenter.png"
 },
 {
     "name": "Blacksmith",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/blacksmith.png"
 },
 {
     "name": "Blacksmith",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/blacksmith.png"
 },
 {
     "name": "Mortar_Mixer",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/mortar_mixer.png"
 },
 {
     "name": "Mortar_Mixer",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/mortar_mixer.png"
 },
 {
     "name": "Mason",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/mason.png"
 },
 {
     "name": "Mason",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/mason.png"
 },
 {
     "name": "Stone_Mason",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/stone_mason.png"
 },
 {
     "name": "Stone_Mason",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/stone_mason.png"
 },
 {
     "name": "Digger",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/digger.png"
 },
 {
     "name": "Digger",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/digger.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 4,
     "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "Measuring_Rode",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 6,
     "img": "./images/tools/measuring_rode.png"
 },
 {
     "name": "Measuring_Rode",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 6,
     "img": "./images/tools/measuring_rode.png"
 },
 {
     "name": "Measuring_Rode",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 6,
     "img": "./images/tools/measuring_rode.png"
 },
 {
     "name": "Wheelbarrow",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 8,
     "img": "./images/tools/wheelbarrow.png"
 },
 {
     "name": "Wheelbarrow",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 8,
     "img": "./images/tools/wheelbarrow.png"
 },
 {
     "name": "Treadwheel_Crane",
     "type": "tool",
+    "plunder": "Plunder",
     "value": 10,
     "img": "./images/tools/treadwheel_crane.png"
 },
@@ -493,36 +517,43 @@ db.cards.insertMany([
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",
   "type": "plan",
+  "value": 0,
   "img": "./images/special_cards/plan.png"
 }
 ]);
