@@ -517,6 +517,7 @@ db.cards.insertMany([
 {
   "name": "Plan",
   "type": "plan",
+  "plunder": "Plunder",
   "value": 0,
   "img": "./images/special_cards/plan.png"
 }
