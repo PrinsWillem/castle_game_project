@@ -2,7 +2,7 @@ import React from "react";
 
 const Player1Points = ({player1Tools}) => {
 
-    const totalPointsPlayer1 = function(card){
+    const totalPointsPlayer1 = function(){
         const pointsArrayPlayer1 = player1Tools.map(card => card.value);
         const toolNames = player1Tools.map(card => card.name);
         
@@ -21,7 +21,6 @@ const Player1Points = ({player1Tools}) => {
                     total += array1[i];
                 }
             }
-            
             return total;
         }
     }
