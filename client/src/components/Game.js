@@ -296,50 +296,50 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
     const onDefenseCardClick = function(card){                                                                          ////// [DEFENCECARD CLICK]
         if((gameTurnPlayers === true) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === true)){            ////
-            setPlayer1Defense(card);
-            const battlefieldNames = gameBattlefield.map(card => card.name);
-            const battlefieldTypes = gameBattlefield.map(card => card.type);                                                                                    //
-            if(battlefieldNames.includes(card.defence)){                                                                   //
-                const card2move = battlefieldTypes.indexOf("material");
-                const copiedPlayer1Materials = [...player1Materials, gameBattlefield[card2move]];
-                setPlayer1Materials(copiedPlayer1Materials);
+            setPlayer1Defense(card);                                                                                    //
+            const battlefieldNames = gameBattlefield.map(card => card.name);                                            //
+            const battlefieldTypes = gameBattlefield.map(card => card.type);                                            //                                        
+            if(battlefieldNames.includes(card.defence)){                                                                //
+                const card2move = battlefieldTypes.indexOf("material");                                                 //
+                const copiedPlayer1Materials = [...player1Materials, gameBattlefield[card2move]];                       //
+                setPlayer1Materials(copiedPlayer1Materials);                                                            //
                 onDeckCardClick(updatedDeck[0]);                                                                        //
                 addCardFromDeck(updatedDeck[0]);                                                                        //
                 removeCardFromPlayer(card);                                                                             //
                 addCardToDiscardDeck(card);                                                                             // PLAYER 1
-                const card2remove = battlefieldNames.indexOf(card.defence);                                                //
-                const copiedBattlefield = [...gameBattlefield];                                                   //
-                copiedBattlefield.splice(card2move, 1);  
-                copiedBattlefield.splice(card2remove, 1);                                                          //
-                addCardToDiscardDeck(gameBattlefield[card2remove]);  // 
-                setGameBattlefield(copiedBattlefield);                                                            //
+                const card2remove = battlefieldNames.indexOf(card.defence);                                             //
+                const copiedBattlefield = [...gameBattlefield];                                                         //
+                copiedBattlefield.splice(card2move, 1);                                                                 //
+                copiedBattlefield.splice(card2remove, 1);                                                               //
+                addCardToDiscardDeck(gameBattlefield[card2remove]);                                                     // 
+                setGameBattlefield(copiedBattlefield);                                                                  //
                 removeCardFromDeck(updatedDeck[0]);                                                                     //
                 setGameTurnPlayers(true);                                                                               //
                 setGamePlayDefenceCard(false);                                                                          //
-            }                                                                                                                     //
+            }                                                                                                           //
         }                                                                                                               //
         else if((gameTurnPlayers === false) && (gamePlayPlunderCard === false) && (gamePlayDefenceCard === true)){      ////
             setPlayer2Defense(card);                                                                                    //
-            const battlefieldNames = gameBattlefield.map(card => card.name);                                               //
-            const battlefieldTypes = gameBattlefield.map(card => card.type);
-            if(battlefieldNames.includes(card.defence)){                                                                   //
-                const card2move = battlefieldTypes.indexOf("material");
-                const copiedPlayer2Materials = [...player2Materials, gameBattlefield[card2move]];
-                setPlayer2Materials(copiedPlayer2Materials);
+            const battlefieldNames = gameBattlefield.map(card => card.name);                                            //
+            const battlefieldTypes = gameBattlefield.map(card => card.type);                                            //
+            if(battlefieldNames.includes(card.defence)){                                                                //
+                const card2move = battlefieldTypes.indexOf("material");                                                 //
+                const copiedPlayer2Materials = [...player2Materials, gameBattlefield[card2move]];                       //
+                setPlayer2Materials(copiedPlayer2Materials);                                                            //
                 onDeckCardClick(updatedDeck[0]);                                                                        //
                 addCardFromDeck(updatedDeck[0]);                                                                        //
                 removeCardFromPlayer(card);                                                                             //
                 addCardToDiscardDeck(card);                                                                             // PLAYER 1
-                const card2remove = battlefieldNames.indexOf(card.defence);                                                //
-                const copiedBattlefield = [...gameBattlefield];  
-                copiedBattlefield.splice(card2move, 1);                                                  //
-                copiedBattlefield.splice(card2remove, 1);                                                          //
-                addCardToDiscardDeck(gameBattlefield[card2remove]);  // 
-                setGameBattlefield(copiedBattlefield);                                                            //
+                const card2remove = battlefieldNames.indexOf(card.defence);                                             //
+                const copiedBattlefield = [...gameBattlefield];                                                         //
+                copiedBattlefield.splice(card2move, 1);                                                                 //
+                copiedBattlefield.splice(card2remove, 1);                                                               //
+                addCardToDiscardDeck(gameBattlefield[card2remove]);                                                     // 
+                setGameBattlefield(copiedBattlefield);                                                                  //
                 removeCardFromDeck(updatedDeck[0]);                                                                     //
                 setGameTurnPlayers(true);                                                                               //
-                setGamePlayDefenceCard(false);     
-            }    
+                setGamePlayDefenceCard(false);                                                                          //
+            }                                                                                                           //    
         }                                                                                                               ////
     };                                                                                                                  //////
 
@@ -461,21 +461,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         setUpdatedDeck(updatedDeck);                                                ////
     };                                                                              //////
 
-    const countUseStateTotalCardsCheck = function(){
-        const total1 = updatedDeck.length;
-        const total2 = player1Hand.length;
-        const total3 = player2Hand.length;
-        const total4 = player1Materials.length;
-        const total5 = player2Materials.length;
-        const total6 = player1Tools.length;
-        const total7 = player2Tools.length;
-        const total8 = gameBattlefield.length
-        
-        const total = (total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8);
-
-        return total;
-    }
-
     // WINNER
     const assignWinner = function(){
         const castleMaterialRequired = ['Labour', 'Money', 'Mortar', 'Stone', 'Wood'];
@@ -499,38 +484,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         } else if (!toolNames1.includes("Plan")){
             sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
         }
-        
-        // if(gameTurnPlayers === true){
-        //     if(toolNames.includes("Plan")){
-        //         sum1 = player1Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
-        //         sum1 -= 2;
-        //     } else if (!toolNames.includes("Plan")){
-        //         sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-        //     }
-        //     if (toolNames1.includes("Plan")){
-        //         sum2 = player2Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
-        //         sum2 -= 2;
-        //     } else if (!toolNames1.includes("Plan")){
-        //         sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-        //     }
-        // } else if(gameTurnPlayers === false){
-        //     if (toolNames1.includes("Plan")){
-        //         sum2 = player2Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
-        //         sum2 -= 2;
-                
-        //     } else if (!toolNames1.includes("Plan")){
-        //         sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-        //     }
-        //     if(toolNames.includes("Plan")){
-        //         sum1 = player1Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
-        //         sum1 -= 2;
-        //     } else if (!toolNames.includes("Plan")){
-        //         sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-        //     }
-        // }
-
-        console.log(sum1);
-        console.log(sum2);
 
         if(castleMaterialRequired.join() === materialNamesPlayer1.join() && sum1 >= 20){
             setGameWon("Player1")
@@ -583,7 +536,6 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                         </div>
                     </div>
                     <div>
-                        <p>{countUseStateTotalCardsCheck()}</p>
                         <Battlefield gameBattlefield={gameBattlefield}/>
                     </div>
                     <div className="player">
