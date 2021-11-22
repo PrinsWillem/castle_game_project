@@ -483,23 +483,54 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
         const materialNamesPlayer2 = player2Materials.map(card => card.name).sort();
         
         const toolNames = player1Tools.map(card => card.name);
+        const toolNames1 = player2Tools.map(card => card.name);
         let sum1 = 0;
         let sum2 = 0;
+
         if(toolNames.includes("Plan")){
             sum1 = player1Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
             sum1 -= 2;
-            console.log(sum1);
         } else if (!toolNames.includes("Plan")){
             sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-            console.log(sum1);
-        } else if (toolNames.includes("Plan")){
+        }
+        if (toolNames1.includes("Plan")){
             sum2 = player2Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
             sum2 -= 2;
-            
-        } else if (!toolNames.includes("Plan")){
+        } else if (!toolNames1.includes("Plan")){
             sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
-            console.log(sum2);
         }
+        
+        // if(gameTurnPlayers === true){
+        //     if(toolNames.includes("Plan")){
+        //         sum1 = player1Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
+        //         sum1 -= 2;
+        //     } else if (!toolNames.includes("Plan")){
+        //         sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+        //     }
+        //     if (toolNames1.includes("Plan")){
+        //         sum2 = player2Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
+        //         sum2 -= 2;
+        //     } else if (!toolNames1.includes("Plan")){
+        //         sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+        //     }
+        // } else if(gameTurnPlayers === false){
+        //     if (toolNames1.includes("Plan")){
+        //         sum2 = player2Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
+        //         sum2 -= 2;
+                
+        //     } else if (!toolNames1.includes("Plan")){
+        //         sum2 = player2Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+        //     }
+        //     if(toolNames.includes("Plan")){
+        //         sum1 = player1Tools.map(card => (card.value + 2)).reduce((c, d) => c + d, 0);
+        //         sum1 -= 2;
+        //     } else if (!toolNames.includes("Plan")){
+        //         sum1 = player1Tools.map(card => card.value).reduce((c, d) => c + d, 0);
+        //     }
+        // }
+
+        console.log(sum1);
+        console.log(sum2);
 
         if(castleMaterialRequired.join() === materialNamesPlayer1.join() && sum1 >= 20){
             setGameWon("Player1")
