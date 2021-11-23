@@ -7,9 +7,6 @@
     font-family: MedievalSharp;
     font-size: 60px;
 }
-.deck{
-    grid-area: deck;
-}
 .game{
     grid-area: game;
     margin-left: 25px;
@@ -22,10 +19,6 @@
     background-color: #282c34;
 }
 .player{
-    margin: 0 auto;
-    text-align: center;
-}
-.player2{
     margin: 0 auto;
     text-align: center;
 }

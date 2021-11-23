@@ -53,11 +53,6 @@
 .Labour img:hover{
     cursor: pointer;
 }
-.Plunder img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
 .Bankruptcy{
     position: absolute;
 }

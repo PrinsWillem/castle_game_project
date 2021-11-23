@@ -7,7 +7,9 @@ import Player2Materials from './Player2Materials';
 import Player2Tools from './Player2Tools';
 import Player1Points from './Player1Points';
 import Player2Points from './Player2Points';
+import Battlefield from './Battlefield';
 import './Game.css';
+import './Battlefield.css'
 import './Player1Hand.css';
 import './Player1Materials.css';
 import './Player1Tools.css';
@@ -15,7 +17,6 @@ import './Player2Hand.css';
 import './Player2Materials.css';
 import './Player2Tools.css';
 import './PlayerPoints.css';
-import Battlefield from './Battlefield';
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
@@ -533,13 +534,11 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
                                         <Player2Points player2Tools={player2Tools}/>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div>
-                        <Battlefield gameBattlefield={gameBattlefield}/>
-                    </div>
-                    <div className="player">
-                        <div id="player-table">
+                            <div className="battlefield">
+                                <div className="battlefield-container">
+                                    <Battlefield gameBattlefield={gameBattlefield}/>
+                                </div>
+                            </div>
                             <div className="player-materials">
                                 <div className="player-materials-container">
                                     <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
