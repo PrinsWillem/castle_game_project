@@ -1,10 +1,14 @@
 .battlefield{
     grid-area: battlefield;
     border-radius: 5px;
-    border: 1px dotted rgba(255,255,255,0.6);
 }
 .battlefield-container{
-    height: 324px;
+    margin-top: 42px;
+    margin-left: 100px;
+    height: 275px;
+    width: 275px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -13,8 +17,103 @@
     align-content: center;
     gap: 10px;
 }
+.Stone{
+    position: absolute;
+    z-index: 1;
+}
+.Stone img{
+    width: 115px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Mortar{
+    position: absolute;
+    z-index: 1;
+}
+.Mortar img{
+    width: 115px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Labour{
+    position: absolute;
+    z-index: 1;
+}
+.Labour img{
+    width: 115px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Wood{
+    position: absolute;
+    z-index: 1;
+}
+.Wood img{
+    width: 115px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Money{
+    position: absolute;
+    z-index: 1;
+}
+.Money img{
+    width: 115px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Shortage{
+    position: absolute;
+    z-index: 2;
+}
+.Shortage img{
+    width: 115px;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Frost{
+    position: absolute;
+    z-index: 2;
+}
+.Frost img{
+    width: 115px;
+    border-radius: 5px;
+    transform: rotate(-10deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Plague{
+    position: absolute;
+    z-index: 2;
+}
+.Plague img{
+    width: 115px;
+    border-radius: 5px;
+    transform: rotate(10deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Fire{
+    position: absolute;
+    z-index: 2;
+}
+.Fire img{
+    width: 115px;
+    border-radius: 5px;
+    transform: rotate(20deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
+.Bankruptcy{
+    position: absolute;
+    z-index: 2;
+}
+.Bankruptcy img{
+    width: 115px;
+    border-radius: 5px;
+    transform: rotate(-15deg);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+}
 .Plunder img{
-    width: 90px;
+    width: 115px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }

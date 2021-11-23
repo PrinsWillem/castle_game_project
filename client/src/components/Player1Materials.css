@@ -13,88 +13,11 @@
     align-content: center;
     gap: 10px;
 }
-.Money img{
+.material img{
     width: 90px;
     border-radius: 5px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }
-.Money img:hover{
+.material img:hover{
     cursor: pointer;
-}
-.Wood img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Wood img:hover{
-    cursor: pointer;
-}
-.Stone img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Stone img:hover{
-    cursor: pointer;
-}
-.Mortar img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Mortar img:hover{
-    cursor: pointer;
-}
-.Labour img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Labour img:hover{
-    cursor: pointer;
-}
-.Bankruptcy{
-    position: absolute;
-}
-.Fire{
-    position: absolute;
-}
-.Shortage{
-    position: absolute;
-}
-.Frost{
-    position: absolute;
-}
-.Plague{
-    position: absolute;
-}
-.Bankruptcy img{
-    width: 90px;
-    border-radius: 5px;
-    transform: rotate(-20deg);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Fire img{
-    width: 90px;
-    border-radius: 5px;
-    transform: rotate(-20deg);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Shortage img{
-    width: 90px;
-    border-radius: 5px;
-    transform: rotate(-20deg);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Frost img{
-    width: 90px;
-    border-radius: 5px;
-    transform: rotate(-20deg);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
-}
-.Plague img{
-    width: 90px;
-    border-radius: 5px;
-    transform: rotate(-20deg);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
 }

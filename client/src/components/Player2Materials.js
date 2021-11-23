@@ -13,7 +13,7 @@ const Player2Materials = ({gameTurnPlayers, player2Materials, onCardToPlunderOth
 
      const player2Cards = player2Materials.map((card) => {
           return(
-               <div className={card.name} key={card._id}>
+               <div className={card.type} key={card._id}>
                     <img onClick={() => {handleClickPlay(card)}} src={card.img} alt={card.name}/>
                </div>
           );
