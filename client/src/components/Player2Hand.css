@@ -1,5 +1,5 @@
 .player2-hand{
-    padding: 25px;
+    grid-area: player2-hand;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -8,15 +8,16 @@
     align-content: center;
 }
 .player2-card{
+    position: relative;
     padding: 10px;
 }
 .player2-card img{
-    width: 115px;
-    border-radius: 5px;
+    height: 21vh;
+    border-radius: 5%;
     transition: 0.5s linear;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .player2-card img:hover{
     cursor: pointer;
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }

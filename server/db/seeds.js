@@ -32,6 +32,18 @@ db.cards.insertMany([
     "img": "./images/material/money.png"
   },
   {
+    "name": "Money",
+    "type": "material",
+    "plunder": "Plunder",
+    "img": "./images/material/money.png"
+  },
+  {
+    "name": "Wood",
+    "type": "material",
+    "plunder": "Plunder",
+    "img": "./images/material/wood.png"
+  },
+  {
     "name": "Wood",
     "type": "material",
     "plunder": "Plunder",
@@ -92,10 +104,10 @@ db.cards.insertMany([
     "img": "./images/material/stone.png"
   },
   {
-    "name": "Labour",
+    "name": "Stone",
     "type": "material",
     "plunder": "Plunder",
-    "img": "./images/material/labour.png"
+    "img": "./images/material/stone.png"
   },
   {
     "name": "Labour",
@@ -120,6 +132,24 @@ db.cards.insertMany([
     "type": "material",
     "plunder": "Plunder",
     "img": "./images/material/labour.png"
+  },
+  {
+    "name": "Labour",
+    "type": "material",
+    "plunder": "Plunder",
+    "img": "./images/material/labour.png"
+  },
+  {
+    "name": "Labour",
+    "type": "material",
+    "plunder": "Plunder",
+    "img": "./images/material/labour.png"
+  },
+  {
+    "name": "Mortar",
+    "type": "material",
+    "plunder": "Plunder",
+    "img": "./images/material/mortar.png"
   },
   {
     "name": "Mortar",
@@ -170,6 +200,18 @@ db.cards.insertMany([
     "img": "./images/attack/bankruptcy.png"
   },
   {
+    "name": "Bankruptcy",
+    "attacks": "Money",
+    "type": "attack",
+    "img": "./images/attack/bankruptcy.png"
+  },
+  {
+    "name": "Fire",
+    "attacks": "Wood",
+    "type": "attack",
+    "img": "./images/attack/fire.png"
+  },
+  {
     "name": "Fire",
     "attacks": "Wood",
     "type": "attack",
@@ -186,6 +228,12 @@ db.cards.insertMany([
     "attacks": "Wood",
     "type": "attack",
     "img": "./images/attack/fire.png"
+  },
+  {
+    "name": "Shortage",
+    "attacks": "Stone",
+    "type": "attack",
+    "img": "./images/attack/shortage.png"
   },
   {
     "name": "Shortage",
@@ -224,6 +272,18 @@ db.cards.insertMany([
     "img": "./images/attack/plague.png"
   },
   {
+    "name": "Plague",
+    "attacks": "Labour",
+    "type": "attack",
+    "img": "./images/attack/plague.png"
+  },
+  {
+    "name": "Frost",
+    "attacks": "Mortar",
+    "type": "attack",
+    "img": "./images/attack/frost.png"
+  },
+  {
     "name": "Frost",
     "attacks": "Mortar",
     "type": "attack",
@@ -240,6 +300,12 @@ db.cards.insertMany([
     "attacks": "Mortar",
     "type": "attack",
     "img": "./images/attack/frost.png"
+  },
+  {
+    "name": "Loan",
+    "defence": "Bankruptcy",
+    "type": "defense",
+    "img": "./images/defense/loan.png"
   },
   {
     "name": "Loan",
@@ -278,6 +344,18 @@ db.cards.insertMany([
     "img": "./images/defense/water.png"
   },
   {
+    "name": "Water",
+    "defence": "Fire",
+    "type": "defense",
+    "img": "./images/defense/water.png"
+  },
+  {
+    "name": "Quarry",
+    "defence": "Shortage",
+    "type": "defense",
+    "img": "./images/defense/quarry.png"
+  },
+  {
     "name": "Quarry",
     "defence": "Shortage",
     "type": "defense",
@@ -312,6 +390,18 @@ db.cards.insertMany([
     "defence": "Plague",
     "type": "defense",
     "img": "./images/defense/apothecary.png"
+  },
+  {
+    "name": "Apothecary",
+    "defence": "Plague",
+    "type": "defense",
+    "img": "./images/defense/apothecary.png"
+  },
+  {
+    "name": "Thaw",
+    "defence": "Frost",
+    "type": "defense",
+    "img": "./images/defense/thaw.png"
   },
   {
     "name": "Thaw",
@@ -414,20 +504,6 @@ db.cards.insertMany([
     "plunder": "Plunder",
     "value": 2,
     "img": "./images/tools/digger.png"
-},
-{
-    "name": "13-Knot_Rope",
-    "type": "tool",
-    "plunder": "Plunder",
-    "value": 4,
-    "img": "./images/tools/13-knot_rope.png"
-},
-{
-    "name": "13-Knot_Rope",
-    "type": "tool",
-    "plunder": "Plunder",
-    "value": 4,
-    "img": "./images/tools/13-knot_rope.png"
 },
 {
     "name": "13-Knot_Rope",
@@ -513,6 +589,28 @@ db.cards.insertMany([
   "name": "Plunder",
   "type": "plunder",
   "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plunder",
+  "type": "plunder",
+  "img": "./images/special_cards/plunder.png"
+},
+{
+  "name": "Plan",
+  "type": "plan",
+  "plunder": "Plunder",
+  "value": 0,
+  "img": "./images/special_cards/plan.png"
 },
 {
   "name": "Plan",

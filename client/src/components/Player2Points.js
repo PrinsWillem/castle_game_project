@@ -22,14 +22,16 @@ const Player2Points = ({player2Tools}) => {
                 }
             }
             
-            return total2;
+            return (
+                <div className="player-points">
+                    {total2}
+                </div>
+            );
         }
     }
 
     return(
-        <div className="player-points">
-            {totalPointsPlayer2()}
-        </div>
+        <>{totalPointsPlayer2()}</>
     )
 }
 export default Player2Points;

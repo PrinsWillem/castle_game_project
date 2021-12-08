@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import GameContainer from './container/GameContainer';
 import './App.css';
+import background from "./background.jpg";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div style={{ backgroundImage: `url(${background})` }} className="App">
       {gameStarted ? <GameContainer/> :
         <main className="App-body">
           <img src="./images/index-(3).gif" height="600" alt="Castle Logo"/>

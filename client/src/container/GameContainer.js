@@ -38,7 +38,7 @@ const GameContainer = () => {
 
     function deckAfterDealing(cards){
         const deck = cards;
-        const remainingCards = 79;
+        const remainingCards = 100;
         const hand = deck.slice(10, remainingCards);
         return hand;
     };

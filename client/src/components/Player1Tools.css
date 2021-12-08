@@ -1,24 +1,27 @@
 .player-tools{
-    height: 90px;
-    margin: 40px 30px 30px 30px;
     grid-area: player-tools;
-    border-radius: 5px;
+    display: flex;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
 }
 .player-tools-container{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     align-content: center;
 }
 .player-card-table{
-    margin-left:-58px;
+    z-index: 2;
+    margin-left: -3.5vw;
 }
 .player-card-table img{
-    width: 90px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6), 0 10px 20px 0 rgba(0,0,0,0.6);
+    height: 16vh;
+    border-radius: 5%;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
 }
 .player-card-table img:hover{
     cursor: pointer;
