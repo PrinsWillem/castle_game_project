@@ -1,13 +1,16 @@
 .player2-tools{
-    height: 90px;
-    margin: 30px 30px 40px 30px;
     grid-area: player2-tools;
+    display: flex;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
 }
 .player2-tools-container{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     align-content: center;
 }

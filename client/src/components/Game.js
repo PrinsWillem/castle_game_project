@@ -17,6 +17,8 @@ import './Player2Hand.css';
 import './Player2Materials.css';
 import './Player2Tools.css';
 import './PlayerPoints.css';
+import backgroundBattlefield from "../castle-battlefield.png";
+import background from "../background.jpg";
 
 const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
 
@@ -544,45 +546,39 @@ const Game = ({firstPlayerHand, firstComputerHand, deckAfterDealing}) => {
     }else{
 
         return(
-            <div id="grid-container">
-                <div className="game">
-                    <div className="player">
-                        <div className="player2-hand">
-                            <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
-                        </div>
-                        <div id="player-table">
-                            <div className="player2-materials">
-                                <div className="player2-materials-container">
-                                    <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
-                                </div>
-                            </div>
-                            <div className="player2-tools">
-                                <div className="player2-tools-container">
-                                    <Player2Tools player2Tools={player2Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
-                                        <Player2Points player2Tools={player2Tools}/>
-                                </div>
-                            </div>
-                            <div className="battlefield">
-                                <div className="battlefield-container">
-                                    <Battlefield gameBattlefield={gameBattlefield}/>
-                                </div>
-                            </div>
-                            <div className="player-materials">
-                                <div className="player-materials-container">
-                                    <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
-                                </div>
-                            </div>
-                            <div className="player-tools">
-                                <div className="player-tools-container">
-                                    <Player1Tools player1Tools={player1Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
-                                        <Player1Points player1Tools={player1Tools}/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="player-hand">
-                            <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
-                        </div>
+            <div style={{ backgroundImage: `url(${background})` }} id="player">
+                <div className="player2-hand">
+                    <Player2Hand player2Hand={player2Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player2Attack={player2Attack} player2Defense={player2Defense}/>
+                </div>
+                <div className="player2-materials">
+                    <div className="player2-materials-container">
+                        <Player2Materials player2Materials={player2Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
                     </div>
+                </div>
+                <div className="player2-tools">
+                    <div className="player2-tools-container">
+                        <Player2Points player2Tools={player2Tools}/>
+                        <Player2Tools player2Tools={player2Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
+                    </div>
+                </div>
+                <div className="battlefield">
+                    <div style={{ backgroundImage: `url(${backgroundBattlefield})` }} className="battlefield-container">
+                        <Battlefield gameBattlefield={gameBattlefield}/>
+                    </div>
+                </div>
+                <div className="player-materials">
+                    <div className="player-materials-container">
+                        <Player1Materials player1Materials={player1Materials} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
+                    </div>
+                </div>
+                <div className="player-tools">
+                    <div className="player-tools-container">
+                        <Player1Points player1Tools={player1Tools}/>
+                        <Player1Tools player1Tools={player1Tools} onCardToPlunderOtherPlayerClick={onCardToPlunderOtherPlayerClick} gameTurnPlayers={gameTurnPlayers}/>
+                    </div>
+                </div>
+                <div className="player-hand">
+                    <Player1Hand player1Hand={player1Hand} gameTurnPlayers={gameTurnPlayers} onMaterialCardClick={onMaterialCardClick} onToolCardClick={onToolCardClick} onPlundercardClick={onPlundercardClick} onPlancardClick={onPlancardClick} onAttackCardClick={onAttackCardClick} onDefenseCardClick={onDefenseCardClick} onDiscardCardClick={onDiscardCardClick} player1Attack={player1Attack} player1Defense={player1Defense}/>
                 </div>
             </div>
         );

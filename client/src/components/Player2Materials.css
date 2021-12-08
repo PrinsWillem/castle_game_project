@@ -1,15 +1,24 @@
 .player2-materials{
-    height: 90px;
-    margin: 30px 30px 40px 30px;
     grid-area: player2-materials;
-    border-radius: 5px;
+    display: flex;
+    height: auto;
+    justify-content: right;
+    align-items: center;
+    align-content: center;
+    margin-right: 3vw;
 }
 .player2-materials-container{
     display: flex;
+    /* padding: 2px 7px 0px 6px;
+    height: 18vh;
+    min-width: 6vw; */
+    width: auto;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     align-content: center;
     gap: 10px;
+    /* border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 5%; */
 }

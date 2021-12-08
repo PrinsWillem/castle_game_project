@@ -21,14 +21,16 @@ const Player1Points = ({player1Tools}) => {
                     total += array1[i];
                 }
             }
-            return total;
+            return (
+                <div className="player-points">
+                    {total}
+                </div>
+            )
         }
     }
 
     return(
-        <div className="player-points">
-            {totalPointsPlayer1()}
-        </div>
+        <>{totalPointsPlayer1()}</>
     )
 }
 export default Player1Points;
